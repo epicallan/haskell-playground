@@ -2,8 +2,8 @@
 {-# LANGUAGE FlexibleContexts      #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies          #-}
-module TypeFamilies where
 
+module TypeFamilies where
 
 data Fire = Charmander | Charmeleon | Charizard deriving Show
 data Water = Squirtle | Wartortle | Blastoise deriving Show

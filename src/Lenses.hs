@@ -1,6 +1,8 @@
 {-# LANGUAGE RankNTypes      #-}
 {-# LANGUAGE TemplateHaskell #-}
 
+module Lenses where
+
 import           Control.Lens
 
 data Point = Point

@@ -1,4 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
+module EitherIO where
 
 import           Control.Applicative
 import           Data.Map            as Map

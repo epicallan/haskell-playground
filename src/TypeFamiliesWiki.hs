@@ -1,6 +1,7 @@
 {-# LANGUAGE TypeFamilies #-}
 -- | examples from ghc wiki
 module TypeFamiliesWiki where
+
 import qualified Data.IntMap as IntMap
 -- list like data family
 data family XList a
@@ -23,7 +24,7 @@ class GMapKey k where
 
 instance GMapKey Int where
     data GMap Int v = GMapInt (IntMap.IntMap v)
-    empty = GMapInt Data.IntMap.empty
+    empty = GMapInt IntMap.empty
     lookup k   (GMapInt m) = IntMap.lookup k m
     insert k v (GMapInt m) = GMapInt (IntMap.insert k v m)
 

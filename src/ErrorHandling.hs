@@ -1,5 +1,4 @@
-
--- example2
+module ErrorHandling where
 
 import           Control.Applicative ()
 import           Control.Concurrent  (threadDelay)

@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9020e03454247dfe77d7bb80332b1a1e621ffb3323f55feba6f6408ce5af10ca
+-- hash: 4b00f32e446353d12b3df39215364f7ff53b4cf84cc275206ec2b72c08693ade
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -29,8 +29,10 @@ library
       src
   build-depends:
       aeson
+    , async
     , base
     , bytestring
+    , classy-prelude-conduit
     , conduit
     , containers
     , lens

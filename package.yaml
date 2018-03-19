@@ -17,16 +17,14 @@ library:
   - TypeFamiliesWiki
   dependencies:
   - aeson
+  - async
   - base
+  - classy-prelude-conduit
   - bytestring
   - conduit
   - containers
   - lens
   - text
-
-
-
-
 
 tests:
   haskell-playground-test:

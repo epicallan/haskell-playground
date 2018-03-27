@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4b00f32e446353d12b3df39215364f7ff53b4cf84cc275206ec2b72c08693ade
+-- hash: fa2be1baa576a397f7df85b10636da5c3cd4a0d39b9c13658f7fa8e00905359b
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -36,6 +36,8 @@ library
     , conduit
     , containers
     , lens
+    , megaparsec
+    , protolude
     , text
   exposed-modules:
       Json
@@ -46,18 +48,6 @@ library
       ConduitEx
       EitherIO
       ErrorHandling
-      Paths_haskell_playground
-  default-language: Haskell2010
-
-test-suite haskell-playground-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  hs-source-dirs:
-      test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base
-    , haskell-playground
-  other-modules:
+      SLang.Main
       Paths_haskell_playground
   default-language: Haskell2010

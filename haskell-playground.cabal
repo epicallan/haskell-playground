@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fa2be1baa576a397f7df85b10636da5c3cd4a0d39b9c13658f7fa8e00905359b
+-- hash: ff8a2b4a2def01f0379af76d6d5084c5180c64519ded6c089d360e18574eb3c2
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -45,9 +45,12 @@ library
       Lenses
       TypeFamiliesWiki
   other-modules:
+      Channels.Ex
+      Channels.Worker
       ConduitEx
       EitherIO
       ErrorHandling
       SLang.Main
+      SLang.Types
       Paths_haskell_playground
   default-language: Haskell2010

@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 74bd7882febf28ee56754da0c6600a5eedf01103d5870037a63f9516c83b450d
+-- hash: 5b818052e13bc6f3eaf13aa51664a61a7e5da2dec938981bbfb72d9bd32fb0dd
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -40,9 +40,7 @@ library
     , text
   exposed-modules:
       Json
-      TypeFamilies
       Lenses
-      TypeFamiliesWiki
   other-modules:
       Channels.Ex
       Channels.Worker
@@ -54,5 +52,7 @@ library
       PhantomTypes.Notes
       SLang.Main
       SLang.Types
+      TypeFamilies.Example
+      TypeFamilies.WikiEx
       Paths_haskell_playground
   default-language: Haskell2010

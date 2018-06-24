@@ -1,8 +1,8 @@
--- This file has been generated from package.yaml by hpack version 0.20.0.
+-- This file has been generated from package.yaml by hpack version 0.28.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ff8a2b4a2def01f0379af76d6d5084c5180c64519ded6c089d360e18574eb3c2
+-- hash: 74bd7882febf28ee56754da0c6600a5eedf01103d5870037a63f9516c83b450d
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -16,7 +16,6 @@ license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
 cabal-version:  >= 1.10
-
 extra-source-files:
     README.md
 
@@ -48,8 +47,11 @@ library
       Channels.Ex
       Channels.Worker
       ConduitEx
+      DataKinds.Notes
       EitherIO
       ErrorHandling
+      GADTs.Notes
+      PhantomTypes.Notes
       SLang.Main
       SLang.Types
       Paths_haskell_playground

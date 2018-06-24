@@ -2,17 +2,17 @@
 
 module SLang.Main where
 
-import           Protolude                  hiding (Prefix, check, try)
+import Protolude hiding (Prefix, check, many, try)
 
-import           Control.Monad              (fail, void)
-import           Data.Maybe                 (fromJust)
-import           Data.String                (String)
-import           Text.Megaparsec
-import           Text.Megaparsec.Char
+import Control.Monad (fail, void)
+import Data.Maybe (fromJust)
+import Data.String (String)
+import Text.Megaparsec
+import Text.Megaparsec.Char
 import qualified Text.Megaparsec.Char.Lexer as L
-import           Text.Megaparsec.Expr
+import Text.Megaparsec.Expr
 
-import           SLang.Types
+import SLang.Types
 
 
 type Parser = Parsec Void String

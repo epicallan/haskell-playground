@@ -3,8 +3,8 @@
 -- {-# LANGUAGE OverloadedStrings #-}
 module ConduitEx where
 
-import           ClassyPrelude.Conduit
--- import           Control.Concurrent.Async
+import ClassyPrelude.Conduit
+import Control.Concurrent (threadDelay)
 
 source :: Monad m => ConduitM i Int m ()
 source = do
@@ -21,7 +21,7 @@ main :: IO ()
 main =
     runConduit $ source  .| mapMC delayItem .| takeC 20 .| mapM_C print
     where
-        delayItem x = liftIO (threadDelay 500000) *> pure x
+        delayItem x = liftIO (threadDelay 500000) $> x
 
 -- TODO: have 2 async actions, one producing values, the other doing expensive computations
 -- once the one with expensive computations completes, terminate the first

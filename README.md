@@ -1,3 +1,3 @@
-# haskell-playground
+# Intermediate Haskell playground
 
-a bunch of examples / tutorials for trying and learning new things in haskell
+A bunch of examples / tutorials for trying and learning new things for intermediate & advanced haskell knowledge

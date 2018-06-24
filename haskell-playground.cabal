@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5b818052e13bc6f3eaf13aa51664a61a7e5da2dec938981bbfb72d9bd32fb0dd
+-- hash: c39b99120dd2327a9105a6d9b9065b432bb5354c70a4faf42635729fdd2aa383
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -49,10 +49,12 @@ library
       EitherIO
       ErrorHandling
       GADTs.Notes
+      Misc.Deriving
       PhantomTypes.Notes
       SLang.Main
       SLang.Types
       TypeFamilies.Example
       TypeFamilies.WikiEx
+      TypesEx.Distance
       Paths_haskell_playground
   default-language: Haskell2010

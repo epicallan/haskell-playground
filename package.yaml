@@ -25,3 +25,4 @@ library:
   - megaparsec
   - protolude
   - text
+  - tagged

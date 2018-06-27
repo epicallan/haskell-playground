@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c39b99120dd2327a9105a6d9b9065b432bb5354c70a4faf42635729fdd2aa383
+-- hash: 4753eb57f6d6972a730704d5a620a97ed558071640b70d06c87d972577343640
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -37,6 +37,7 @@ library
     , lens
     , megaparsec
     , protolude
+    , tagged
     , text
   exposed-modules:
       Json
@@ -51,6 +52,9 @@ library
       GADTs.Notes
       Misc.Deriving
       PhantomTypes.Notes
+      Proxy.Notes
+      RankN.Notes
+      Servant.Notes
       SLang.Main
       SLang.Types
       TypeFamilies.Example

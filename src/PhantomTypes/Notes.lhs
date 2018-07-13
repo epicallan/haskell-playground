@@ -16,3 +16,8 @@ Phantom type version is
 
 < plus :: T Int -> T Int -> T Int
 < concat :: T String -> T String -> T String
+
+Note that type a is a type placeholder and is not used in any of the constructors for T.
+Hence the name phantom type.
+
+Phantom types enable us to write more type safe code, make invalid states less likely to exist.

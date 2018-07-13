@@ -1,7 +1,9 @@
 > {-#LANGUAGE GADTs #-}
 > module GADTs.Notes where 
 
-GADTs allow us to restrict the return types of data type constructors.
+GADTs allow us to restrict the return types of data type constructors. 
+
+
 
 Consider a small simple language represented in below data type, in which a is `a` is a phantomType that
 allows us to restrict return type of `Exp``
@@ -29,12 +31,19 @@ if we didn't have phantom type, the add function below would have type checked a
 < B' True `Add'` I' 5 :: Expr'
 
 
-The issue with phantom type solution it makes such statement below valid
+One of the big difference between GADTs and phantomTypes is that we can pattern match over the parameterized contructors 
+we get from GADTs. Which is not the case with phantomTypes.
+
+Since the phantom type in phantomType is not inbuilt with in data constructors of a phantomType, expressions
+as the one below are valid and we can't even pattern match over constructors.
+
 
 < I 5 :: Expr String
 
 GADTs allow us to restrict the return type of constructors in a more concise manner. 
 Put another way with GADTs we can control exactly what kind of data structure we return. 
+
+What would be just a phantomType a is part of data type constructors
 
 > data Expr a where
 >    I   :: Int  -> Expr Int

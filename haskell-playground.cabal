@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4753eb57f6d6972a730704d5a620a97ed558071640b70d06c87d972577343640
+-- hash: b2b518bb3df2129151c48385c95b2dd9283e063d812dc7140a693d8e26e99792
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -46,6 +46,7 @@ library
       Channels.Ex
       Channels.Worker
       ConduitEx
+      DataClass.Notes
       DataKinds.Notes
       EitherIO
       ErrorHandling
@@ -53,6 +54,7 @@ library
       Misc.Deriving
       PhantomTypes.Notes
       Proxy.Notes
+      RandomTypesTheory.Existential
       RankN.Notes
       Servant.Notes
       SLang.Main

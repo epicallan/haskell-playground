@@ -38,13 +38,19 @@ solution use MonadThrow
 
 - custom Exception string types is an anti-type
 
-- custom Exception string types is an anti-type
-
 < foo = do
 <    if x then return y else error "something bad happened"
 
 
 side Notes
 
+
 it's also almost always a bad idea to have such a concrete transformer stack used in a public-facing API. 
 It's usually better to express a function in terms of typeclass requirements, using mtl typeclasses as necessary.
+
+< foo :: Int -> IO String
+
+This can always be generalized with a usage of liftIO to:
+
+< foo :: MonadIO m => Int -> m String
+

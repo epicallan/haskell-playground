@@ -12,7 +12,7 @@ Here are a collection of notes from various sources on Exceptions handling in ha
  throw an exception for uncommon errors. 
  Note that returning Either from ExceptT IO means there are now 3 distinct sources of errors in just one function.
 
-- masking async exceptions as an anti pattern
+- masking async exceptions is an anti pattern
 
 - Use the bracket pattern wherever possible.
 
@@ -22,7 +22,7 @@ consider code below
 < foo <- lookup "foo" :: m a
 < f foo :: Maybe a
 
-if f returns Nothing we have no idea why thats the case.
+if f returns Nothing we have no idea why thats the cause.
 An improvment could be 
 
 < lookup :: Eq k => k -> [(k, v)] -> Either (KeyNotFound k) v

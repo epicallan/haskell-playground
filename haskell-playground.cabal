@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: cc92a5e47fcda36bff746b902f5b8c64e9ab6bef901bb4514762e3f8b562b782
+-- hash: a497c666671a4e16dc2cfcb022b0a98d6f472265da85c1969cac3ca8553539ea
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -26,6 +26,7 @@ source-repository head
 library
   hs-source-dirs:
       src
+  default-extensions: LambdaCase DeriveGeneric FlexibleInstances FlexibleContexts ScopedTypeVariables TypeApplications MultiParamTypeClasses
   build-depends:
       aeson
     , async
@@ -48,15 +49,17 @@ library
       ConduitEx
       DataClass.Notes
       DataKinds.Notes
-      Deriving.Deriving
+      Deriving.Notes
       EitherIO
+      EqualityConstraint.Notes
       ErrorHandling
       Exceptions.Notes
+      Existential.Notes
       FnDependencies.Notes
       GADTs.Notes
+      Overlap.Notes
       PhantomTypes.Notes
       Proxy.Notes
-      RandomTypesTheory.Existential
       RankN.Notes
       ResourceT.Notes
       Servant.Notes

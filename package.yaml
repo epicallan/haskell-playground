@@ -26,3 +26,11 @@ library:
   - protolude
   - text
   - tagged
+default-extensions:
+  - LambdaCase
+  - DeriveGeneric
+  - FlexibleInstances
+  - FlexibleContexts
+  - ScopedTypeVariables
+  - TypeApplications
+  - MultiParamTypeClasses

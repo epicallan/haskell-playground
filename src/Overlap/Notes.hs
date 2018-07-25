@@ -261,6 +261,22 @@ polyE'' = countE
 --
 -- >>> countE (Just (5 :: Int))
 -- 5
+
+-------------------------------------------------------------------------------
+-- singgleton Bool
+-------------------------------------------------------------------------------
+
+data SBool (b :: Bool) where
+    STrue  :: SBool 'True
+    SFalse :: SBool 'False
+
+class    SBoolI b      where
+    sbool :: SBool b
+instance SBoolI 'True  where
+    sbool = STrue
+instance SBoolI 'False where
+    sbool = SFalse
+
 instance SBoolI (a == Int) => CountE (Maybe a) where
     countE = case sbool :: SBool (a == Int) of
         STrue  -> gcastWith (eqToRefl :: a :~: Int) $ maybe 0 id
@@ -303,17 +319,6 @@ overlap.hs:284:11:
 testT_3 :: Int
 testT_3 = countT $ T.pack "foo bar baz"
 
--------------------------------------------------------------------------------
--- singgleton Bool
--------------------------------------------------------------------------------
-
-data SBool (b :: Bool) where
-    STrue  :: SBool 'True
-    SFalse :: SBool 'False
-
-class    SBoolI b      where sbool :: SBool b
-instance SBoolI 'True  where sbool = STrue
-instance SBoolI 'False where sbool = SFalse
 
 -------------------------------------------------------------------------------
 -- Main

@@ -1,5 +1,5 @@
 > {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-> module Misc.Deriving where
+> module Deriving.Notes where
 
 consider a newtype Dollars below
  

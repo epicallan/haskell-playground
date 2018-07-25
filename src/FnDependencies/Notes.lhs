@@ -19,11 +19,11 @@ due to mutliple type parameters the compiler will reject expression below
 
 you have to help compiler 
 
-> coerce (12 :: Int) :: String
+< coerce (12 :: Int) :: String
 
 Function dependencies enable us to reduce this ambiguity
 
-> Class Coerce2 a b | b -> a where 
+> class Coerce2 a b | b -> a where 
 >   coerce2 :: a -> b
 
 > instance Coerce2 Int String where 
@@ -33,7 +33,7 @@ The relation (b -> a ) tells compiler that if it can infer b, it can simply look
 one of the ype class instances of Coerce2. 
 
 
-> coerce2 12  :: String
+< coerce2 12  :: String
 
 Compiler can infer b :: String and can find uniquely corresponding type a :: Int from instance declaration 
 Coerce2 Int String ...

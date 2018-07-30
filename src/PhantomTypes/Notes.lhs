@@ -21,3 +21,5 @@ Note that type a is a type placeholder and is not used in any of the constructor
 Hence the name phantom type.
 
 Phantom types enable us to write more type safe code, make invalid states less likely to exist.
+
+TODO: https://blog.jle.im/entry/introduction-to-singletons-1.html

@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a497c666671a4e16dc2cfcb022b0a98d6f472265da85c1969cac3ca8553539ea
+-- hash: ced1dbf7fb0e77f001765b5778d28715a0a30a15532777c9ac22e0adc498b73c
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -37,9 +37,11 @@ library
     , containers
     , lens
     , megaparsec
+    , mtl
     , protolude
     , tagged
     , text
+    , universum
   exposed-modules:
       Json
       Lenses
@@ -50,6 +52,7 @@ library
       DataClass.Notes
       DataKinds.Notes
       Deriving.Notes
+      Design.SampleA.Main
       EitherIO
       EqualityConstraint.Notes
       ErrorHandling
@@ -57,7 +60,9 @@ library
       Existential.Notes
       FnDependencies.Notes
       GADTs.Notes
+      Overlap.Example
       Overlap.Notes
+      Overlap.TypeFamilies
       PhantomTypes.Notes
       Proxy.Notes
       RankN.Notes
@@ -65,7 +70,9 @@ library
       Servant.Notes
       SLang.Main
       SLang.Types
+      TypeFamilies.Background
       TypeFamilies.Example
+      TypeFamilies.FunWithTypesPaper.Notes
       TypeFamilies.WikiEx
       TypesEx.Distance
       Paths_haskell_playground

@@ -22,8 +22,10 @@ library:
   - conduit
   - containers
   - lens
+  - mtl
   - megaparsec
   - protolude
+  - universum
   - text
   - tagged
 default-extensions:

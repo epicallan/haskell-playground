@@ -3,6 +3,7 @@
 
 > module Proxy.Notes where 
 > import Data.Tagged
+> import Data.Proxy
 
 This notes are largely refrenced from https://kseo.github.io/posts/2017-01-15-data-proxy.html
 
@@ -34,8 +35,10 @@ Applications
 
 Solve type ambiguity
 
-< f :: forall proxy a. (Read a, Show a) => proxy a -> String -> String
-< f _ = (show :: a -> String) . read
+> f :: forall a. (Read a, Show a) => Proxy a -> String -> String
+> f _ = (show :: a -> String) . read
+
+< f (Proxy :: Proxy Int) "3"
 
 can also be solved by TypeApplications
 

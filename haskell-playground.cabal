@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ced1dbf7fb0e77f001765b5778d28715a0a30a15532777c9ac22e0adc498b73c
+-- hash: 6297df24e1d17dd317c4c33be96b9f1e47f8a4f8d2d4eee428a754fd372e610d
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -60,6 +60,7 @@ library
       Existential.Notes
       FnDependencies.Notes
       GADTs.Notes
+      HighKindedData.Notes
       Overlap.Example
       Overlap.Notes
       Overlap.TypeFamilies

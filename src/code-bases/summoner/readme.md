@@ -1,0 +1,3 @@
+# Notes
+
+- Missing nix support

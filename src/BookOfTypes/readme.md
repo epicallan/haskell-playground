@@ -1,0 +1,1 @@
+# Notes and exercises from book-of-types book

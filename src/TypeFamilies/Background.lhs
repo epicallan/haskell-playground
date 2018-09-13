@@ -24,7 +24,8 @@ We can define some type foo as below
 
 ``` type Foo m n = [(m, Maybe n)] ````
 
-which defines the type synonym Foo uniformly for all arguments m and n, but using only type synonyms we cannot say
+which defines the type synonym Foo uniformly for all arguments m and n, 
+but using only type synonyms we cannot say
 
 ```
   type Foo m Int = [m]

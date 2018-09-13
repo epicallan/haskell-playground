@@ -26,7 +26,7 @@ instance Pokemon Water where
 
 instance Pokemon Grass where
     data Move Grass = VineWhip deriving Show
-    pickMove _ = VineWhip
+    pickMove _      = VineWhip
 
 
 printBattle :: String -> String -> String -> String -> String -> IO ()

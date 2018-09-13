@@ -30,7 +30,7 @@ Function dependencies enable us to reduce this ambiguity
 >   coerce2 = show 
 
 The relation (b -> a ) tells compiler that if it can infer b, it can simply look up a in 
-one of the ype class instances of Coerce2. 
+one of the type class instances of Coerce2. 
 
 
 < coerce2 12  :: String

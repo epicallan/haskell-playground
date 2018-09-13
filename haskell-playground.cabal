@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a6ed0f2a65d9a5692a2e53a49524ef40631a0ebd372ea2e00c896f350e14f993
+-- hash: 97b39ca6bd97da96812104971c1ffbc59ff241626e03beeb2eabf2e6a336fd8a
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -49,6 +49,7 @@ library
       Channels.Ex
       Channels.Worker
       ConduitEx
+      DataKinds.BookOfTypes.Intro
       DataKinds.Notes
       Deriving.Notes
       Design.SampleA.Main
@@ -59,7 +60,7 @@ library
       Existential.Notes
       FnDependencies.Notes
       GADTs.Notes
-      GenericPrograming.DataClass.Notes
+      Generic.DataClass.Notes
       HighKindedData.Notes
       Overlap.Example
       Overlap.Notes

@@ -1,6 +1,8 @@
 > {-# LANGUAGE  ExistentialQuantification #-}
 > module Existential.Notes where 
 
+An existential will take a value and hide type information associated with it, keeping only a constraint. 
+A Proxy will take no value and attach type information to it.
 
 Existential Quantified types is away of squashing types into one. 
 Think usage of forall in function definitions.

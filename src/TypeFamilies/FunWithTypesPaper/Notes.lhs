@@ -62,19 +62,19 @@ A solution to this is functional dependencies
 
 < class Mutation m r | m -> r where  {}
 
-"m -> r " state's m is related to only one r 
+"m -> r" state's m is related to only one r 
 
 The solution: Associated types 
 ______________________________
 
 If m is always associated to only one type with in class Mutation. Then it can be said 
-class Mutation only requires one type paramete which is associated with another, which is 
+class Mutation only requires one type parameter which is associated with another, which is 
 functionally dependent on it. 
 
 > class Mutation m where 
 >   type Ref m :: * -> *
->   newRef :: a -> m (Ref m a)
->   readRef :: Ref m a -> m a
+>   newRef   :: a -> m (Ref m a)
+>   readRef  :: Ref m a -> m a
 >   writeRef :: Ref m a -> a -> m ()
 
 > instance Mutation IO where 
@@ -86,13 +86,13 @@ functionally dependent on it.
 
 > instance Mutation (ST s) where
 >   type Ref (ST s) = STRef s 
->   newRef = newSTRef 
->   readRef = readSTRef 
+>   newRef   = newSTRef 
+>   readRef  = readSTRef 
 >   writeRef = writeSTRef
 
 
 It can be said that Ref is a type family or an associated type of class Mutation. 
-`Ref m a`` means applying type function to m.
+`Ref m a` means applying type function to m.
 
 Explicit Type coercion with associated types
 ___________

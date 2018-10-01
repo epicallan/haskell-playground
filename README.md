@@ -5,4 +5,5 @@ A bunch of examples / tutorials for trying and learning new things for intermedi
 Misc
 ___
 
-- https://www.reddit.com/r/haskell/comments/9cyzzb/must_readfavourite_functional_pearls/
+- [functional_pearls](https://www.reddit.com/r/haskell/comments/9cyzzb/must_readfavourite_functional_pearls/)
+- [Resources & papers] (https://github.com/cohomolo-gy/haskell-resources/blob/master/README.md)

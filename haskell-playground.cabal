@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 97b39ca6bd97da96812104971c1ffbc59ff241626e03beeb2eabf2e6a336fd8a
+-- hash: b64670509555a18ab972b13fe385331649415f7c7ff103d99cdf583b390e5995
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -46,11 +46,13 @@ library
       Json
       Lenses
   other-modules:
+      BookOfTypes.DataKinds.BuiltInTypes
+      BookOfTypes.DataKinds.Intro
+      BookOfTypes.DataKinds.Notes
+      BookOfTypes.TypeFamilies
       Channels.Ex
       Channels.Worker
       ConduitEx
-      DataKinds.BookOfTypes.Intro
-      DataKinds.Notes
       Deriving.Notes
       Design.SampleA.Main
       EitherIO

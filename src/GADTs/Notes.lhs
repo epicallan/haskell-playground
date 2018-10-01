@@ -31,7 +31,8 @@ if we didn't have phantom type, the add function below would have type checked a
 < B' True `Add'` I' 5 :: Expr'
 
 
-One of the big difference between GADTs and phantomTypes is that we can pattern match over the parameterized contructors 
+One of the big difference between GADTs and phantomTypes is that 
+we can pattern match over the parameterized contructors 
 we get from GADTs. Which is not the case with phantomTypes.
 
 Since the phantom type in phantomType is not inbuilt with in data constructors of a phantomType, expressions

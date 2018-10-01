@@ -2,7 +2,7 @@
 > {-# LANGUAGE KindSignatures #-}
 > {-#LANGUAGE GADTs #-}
 
-> module DataKinds.BookOfTypes.Intro where 
+> module BookOfTypes.DataKinds.Intro where 
 
 > data Bool = True | False
 

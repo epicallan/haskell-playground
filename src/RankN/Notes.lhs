@@ -40,3 +40,11 @@ is Rank 0
 
 and tupleF' is Rank 2 while tupleF is Rank 1
 
+> applyToBoth :: (forall a. a -> a) -> (Int, Bool)
+> applyToBoth f = (f 5, f True)
+
+In the function below forall a is associated to  brokenApplyToBoth.
+Caller of the function gets to chose type of `a`
+
+< brokenApplyToBoth :: forall a. (a -> a) -> (Int, Bool) 
+< brokenApplyToBoth' f = (f 5, f True)

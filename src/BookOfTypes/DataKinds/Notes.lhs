@@ -2,7 +2,7 @@
 > {-# LANGUAGE KindSignatures #-}
 > {-#LANGUAGE GADTs #-}
 
-> module DataKinds.Notes where 
+> module BookOfTypes.DataKinds.Notes where 
 
 Notes on Data kind
 

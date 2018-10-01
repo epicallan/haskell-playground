@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b64670509555a18ab972b13fe385331649415f7c7ff103d99cdf583b390e5995
+-- hash: eb77f781e20a1aed4dbe9f7a2aa261212d9df3bbfcda3f77bf0041183fef95ec
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -49,6 +49,8 @@ library
       BookOfTypes.DataKinds.BuiltInTypes
       BookOfTypes.DataKinds.Intro
       BookOfTypes.DataKinds.Notes
+      BookOfTypes.GADT.HList
+      BookOfTypes.GADT.Lang
       BookOfTypes.TypeFamilies
       Channels.Ex
       Channels.Worker

@@ -6,4 +6,4 @@ Misc
 ___
 
 - [functional_pearls](https://www.reddit.com/r/haskell/comments/9cyzzb/must_readfavourite_functional_pearls/)
-- [Resources & papers] (https://github.com/cohomolo-gy/haskell-resources/blob/master/README.md)
+- [Resources & papers](https://github.com/cohomolo-gy/haskell-resources/blob/master/README.md)

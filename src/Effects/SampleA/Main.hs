@@ -3,7 +3,7 @@
 {-# LANGUAGE TemplateHaskell   #-}
 {-# LANGUAGE TypeApplications  #-}
 
-module Design.SampleA.Main where
+module Effects.SampleA.Main where
 
 import Universum
 

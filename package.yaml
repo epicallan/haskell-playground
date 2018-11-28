@@ -21,13 +21,18 @@ library:
   - bytestring
   - conduit
   - containers
+  - directory
+  - filepath
   - lens
   - mtl
   - megaparsec
   - protolude
+  - singletons
   - universum
-  - text
   - tagged
+  - temporary
+  - text
+  - vinyl
 default-extensions:
   - LambdaCase
   - DeriveGeneric

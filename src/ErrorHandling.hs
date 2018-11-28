@@ -67,3 +67,24 @@ example = void $ timeout (1 * 1000 * 1000) $
 
 main :: IO ()
 main = test example
+
+-- newtype MyException = MyException Text deriving Show
+
+-- instance Exception MyException
+
+-- newtype Env = Env { name :: Text } deriving (Functor, Show)
+
+-- type App (m :: Monad) = ExceptT MyException m a
+
+-- main' :: (MonadIO m, MonadReader Env m) => App m Text
+-- main' = runExceptT $ do
+--   _   <- test1
+--   val <- test2
+--   pure $ Right $ map toUpper val
+
+
+-- test1 :: Monad m => App m ()
+-- test1 = throwError $ MyException "some bad error"
+
+-- test2 :: Monad m => App m Text
+-- test2 = pure $ Right "success"

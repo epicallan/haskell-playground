@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: eb77f781e20a1aed4dbe9f7a2aa261212d9df3bbfcda3f77bf0041183fef95ec
+-- hash: a3717ad8700a622528e3fd4bb79796dea16729db9520876f46552cb321f96192
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -35,13 +35,18 @@ library
     , classy-prelude-conduit
     , conduit
     , containers
+    , directory
+    , filepath
     , lens
     , megaparsec
     , mtl
     , protolude
+    , singletons
     , tagged
+    , temporary
     , text
     , universum
+    , vinyl
   exposed-modules:
       Json
       Lenses
@@ -56,7 +61,7 @@ library
       Channels.Worker
       ConduitEx
       Deriving.Notes
-      Design.SampleA.Main
+      Effects.SampleA.Main
       EitherIO
       EqualityConstraint.Notes
       ErrorHandling
@@ -77,10 +82,12 @@ library
       Servant.Notes
       SLang.Main
       SLang.Types
+      TempFile
       TypeFamilies.Background
       TypeFamilies.Example
       TypeFamilies.FunWithTypesPaper.Notes
       TypeFamilies.WikiEx
       TypesEx.Distance
+      Vinyl.Example
       Paths_haskell_playground
   default-language: Haskell2010

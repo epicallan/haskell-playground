@@ -11,4 +11,4 @@ ___
 
 - [types intro primer](https://diogocastro.com/blog/2018/10/17/haskells-kind-system-a-primer/#hofs-and-hkts)
 
--[Singletons blog post](https://blog.jle.im/entry/introduction-to-singletons-1.html)
+- [Resources & papers](https://github.com/cohomolo-gy/haskell-resources/blob/master/README.md)

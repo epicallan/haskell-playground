@@ -1,3 +1,4 @@
 # Block chain / crypto specific notes
 
-blockchain [related reading] (https://github.com/haroldcarr/simple-blockchain)
+- [block chain overview](https://github.com/haroldcarr/simple-blockchain)
+- [btc overview](https://bitcoin.org/en/developer-guide#block-chain)

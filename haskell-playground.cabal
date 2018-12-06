@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7e7ebe0b11acc7585677cdfdd78708bc90a15eb4a51ee866df15fb024b4adaa2
+-- hash: 6c5e3696ff73d3dd5553ba6b913cab12c1f4c0566c60b35b50b5f0110053038e
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -24,6 +24,48 @@ source-repository head
   location: https://github.com/epicallan/haskell-playground
 
 library
+  exposed-modules:
+      BookOfTypes.DataKinds.BuiltInTypes
+      BookOfTypes.DataKinds.Intro
+      BookOfTypes.DataKinds.Notes
+      BookOfTypes.GADT.HList
+      BookOfTypes.GADT.Lang
+      BookOfTypes.TypeFamilies
+      Channels.Ex
+      Channels.Worker
+      ConduitEx
+      DependentHaskell.Vectors
+      Deriving.Notes
+      Effects.SampleA.Main
+      EitherIO
+      EqualityConstraint.Notes
+      Exceptions.Notes
+      Existential.Notes
+      FnDependencies.Notes
+      GADTs.Notes
+      Generic.DataClass.Notes
+      HighKindedData.Notes
+      Lenses.Tutorial
+      Overlap.Example
+      Overlap.Notes
+      Overlap.TypeFamilies
+      PhantomTypes.Notes
+      Prisms.Notes
+      Proxy.Notes
+      RankN.Notes
+      ResourceT.Notes
+      Servant.Notes
+      Singleton.Notes
+      SLang.Main
+      SLang.Types
+      TypeFamilies.Background
+      TypeFamilies.Example
+      TypeFamilies.FunWithTypesPaper.Notes
+      TypeFamilies.WikiEx
+      TypesEx.Distance
+      Vinyl.Example
+  other-modules:
+      Paths_haskell_playground
   hs-source-dirs:
       src
   default-extensions: LambdaCase DeriveGeneric FlexibleInstances FlexibleContexts ScopedTypeVariables TypeApplications MultiParamTypeClasses
@@ -47,49 +89,4 @@ library
     , text
     , universum
     , vinyl
-  exposed-modules:
-      Json
-      Lenses
-  other-modules:
-      BookOfTypes.DataKinds.BuiltInTypes
-      BookOfTypes.DataKinds.Intro
-      BookOfTypes.DataKinds.Notes
-      BookOfTypes.GADT.HList
-      BookOfTypes.GADT.Lang
-      BookOfTypes.TypeFamilies
-      Channels.Ex
-      Channels.Worker
-      ConduitEx
-      DependentHaskell.Vectors
-      Deriving.Notes
-      Effects.SampleA.Main
-      EitherIO
-      EqualityConstraint.Notes
-      ErrorHandling
-      Exceptions.Notes
-      Existential.Notes
-      FnDependencies.Notes
-      GADTs.Notes
-      Generic.DataClass.Notes
-      HighKindedData.Notes
-      Overlap.Example
-      Overlap.Notes
-      Overlap.TypeFamilies
-      PhantomTypes.Notes
-      Prisms.Notes
-      Proxy.Notes
-      RankN.Notes
-      ResourceT.Notes
-      Servant.Notes
-      Singleton.Notes
-      SLang.Main
-      SLang.Types
-      TempFile
-      TypeFamilies.Background
-      TypeFamilies.Example
-      TypeFamilies.FunWithTypesPaper.Notes
-      TypeFamilies.WikiEx
-      TypesEx.Distance
-      Vinyl.Example
-      Paths_haskell_playground
   default-language: Haskell2010

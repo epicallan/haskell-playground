@@ -9,3 +9,5 @@
 - [lenses overview](https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/a-little-lens-starter-tutorial)
 
 - [lenses in MTL](http://hackage.haskell.org/package/microlens-mtl-0.1.11.1/docs/Lens-Micro-Mtl.html)
+
+- [lenses by example series](https://lens-by-example.chrispenner.ca/articles/traversals/writing-traversals)

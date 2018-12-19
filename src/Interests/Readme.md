@@ -10,3 +10,14 @@ https://github.com/nmattia/snack
 - [ ] https://themonadreader.files.wordpress.com/2013/08/issue221.pdf
 - [ ] (Scrap your boilerplate with class:
 extensible generic functions)[https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/gmap3.pdf]
+- [ ] (Like Prometheus, but for logs. )[https://github.com/grafana/loki]
+- [ ] (PureScript package manager and build tool powered by Dhall and Spacchetti package-sets)[https://github.com/spacchetti/spago]
+- [ ] (A Haskell library that simplifies access to remote data, such as databases or web-based services)[https://github.com/facebook/Haxl]
+
+- [ ] (Instant Realtime GraphQL on Postgres)[https://hasura.io/]
+
+- [ ] (Example-based Haskell Documentation Engine)[https://github.com/NinjaTrappeur/ex-hack]. Contributor friendly
+- [ ] (Acid world)[https://github.com/matchwood/acid-world] Possibly Contributor friendly
+- [ ] Category theory for programmers book by @BartoszMilewski
+- [ ] (A configuration language guaranteed to terminate https://dhall-lang.org/)[https://github.com/dhall-lang/dhall-haskell] Contributor friendly
+- [ ] (Haskell IDE engine)[https://github.com/haskell/haskell-ide-engine]

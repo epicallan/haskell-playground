@@ -19,3 +19,8 @@
 - [ ] Category theory for programmers book by @BartoszMilewski
 - [ ] [A configuration language guaranteed to terminate](https://dhall-lang.org/) Contributor friendly
 - [ ] [Haskell IDE engine](https://github.com/haskell/haskell-ide-engine)
+- [ ] consider writing apps following [real world](https://github.com/gothinkster/realworld) spec using a variety of haskell design pattern eg https://github.com/boxyoman/haskell-realworld-example
+- [ ] Possibly create [NetlifyCMS](https://github.com/netlify/netlify-cms) but in haskell for interfacing with Hakyll site
+- [ ] Automatically generating Servant API docs
+- Summoner support multi project set up i.e mono repo.
+- [read Type theory formal proof introduction](https://www.amazon.com/Type-Theory-Formal-Proof-Introduction)

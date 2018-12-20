@@ -22,3 +22,7 @@ cabal.project.local
 TAGS
 .vscode
 .DS_Store
+tiers/
+
+# cabal
+*.cabal

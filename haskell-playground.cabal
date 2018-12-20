@@ -1,8 +1,10 @@
--- This file has been generated from package.yaml by hpack version 0.28.2.
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6c5e3696ff73d3dd5553ba6b913cab12c1f4c0566c60b35b50b5f0110053038e
+-- hash: 780c6633a18f0a8223e78bb1dde72105d759b864e26ef51acfa1e81f15acc50e
 
 name:           haskell-playground
 version:        0.1.0.0
@@ -15,7 +17,6 @@ copyright:      2017 Lukwago Allan
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
-cabal-version:  >= 1.10
 extra-source-files:
     README.md
 
@@ -45,6 +46,7 @@ library
       GADTs.Notes
       Generic.DataClass.Notes
       HighKindedData.Notes
+      Lenses.Basics.Core
       Lenses.Tutorial
       Overlap.Example
       Overlap.Notes

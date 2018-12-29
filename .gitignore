@@ -25,4 +25,4 @@ TAGS
 tiers/
 
 # cabal
-*.cabal
+haskell-playground.cabal

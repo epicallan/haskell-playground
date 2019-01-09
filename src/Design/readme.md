@@ -56,3 +56,9 @@ modify f = do
   liftIO $ atomically $ modifyTVar' (env^.balance) f
 ```
 
+## Links
+
+------------;
+
+- [Lambda the ultimate Pattern Factory: FP, Haskell, Typeclassopedia vs Software Design Patterns](https://github.com/thma/LtuPatternFactory)
+- [Design Patterns in Haskell](http://blog.ezyang.com/2010/05/design-patterns-in-haskel/)

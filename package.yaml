@@ -27,6 +27,7 @@ library:
   - singletons
   - universum
   - tagged
+  - template-haskell
   - temporary
   - text
   - vinyl
@@ -38,3 +39,4 @@ default-extensions:
   - ScopedTypeVariables
   - TypeApplications
   - MultiParamTypeClasses
+  - RecordWildCards

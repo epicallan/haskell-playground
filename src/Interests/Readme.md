@@ -24,3 +24,13 @@
 - [ ] Automatically generating Servant API docs
 - Summoner support multi project set up i.e mono repo.
 - [read Type theory formal proof introduction](https://www.amazon.com/Type-Theory-Formal-Proof-Introduction)
+
+- [ ] this can't be replicated in cabal;
+    ```
+    stack test ariadne-cardano --trace --fast --test-arguments '--match "Compare wallet kernel to pure model"'
+    ```
+- [ ] [covariance and contravariance](https://www.fpcomplete.com/blog/2016/11/covariance-contravariance)
+
+- [ ] [scrap your boilerplate with class extensible generic functions](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/gmap3.pdf)
+
+- [ ] [GHC extensions exercises](https://github.com/i-am-tom/haskell-exercises)

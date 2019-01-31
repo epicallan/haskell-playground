@@ -34,3 +34,8 @@
 - [ ] [scrap your boilerplate with class extensible generic functions](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/gmap3.pdf)
 
 - [ ] [GHC extensions exercises](https://github.com/i-am-tom/haskell-exercises)
+
+- [ ] [Collection of haskell tutorial blogs](https://blog.poisson.chat/)
+
+- [ ] Port [hasktags](http://hackage.haskell.org/package/hasktags) to vscode
+- [ ] Port [dante](https://github.com/jyp/dante) to vscode

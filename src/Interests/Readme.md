@@ -39,3 +39,5 @@
 
 - [ ] Port [hasktags](http://hackage.haskell.org/package/hasktags) to vscode
 - [ ] Port [dante](https://github.com/jyp/dante) to vscode
+- [ ] When one uses `mixin` for custom prelude in a project, intero & dantes keep reporting missing prelude
+- [ ] [Property testing](https://www.fpcomplete.com/blog/quickcheck-hedgehog-validity)

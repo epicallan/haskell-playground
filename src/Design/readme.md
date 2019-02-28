@@ -18,7 +18,6 @@ One way of keeping code pure is to have 2 class instances of it. In which one we
 Take aways from [Micheal's blog](https://michaelxavier.net/posts/2016-04-03-Enterprise-Haskell-Pattern-Lensed-Reader.html)
 ___________
 
-
 - Create “classy” lenses for your app’s state type and any subcomponents of it that you are likely to need to access independently.
 
 - Use constraints throughout the code instead of concrete transformer stacks. You only end up specifying the stack near main where you actually run the thing.
@@ -62,3 +61,7 @@ modify f = do
 
 - [Lambda the ultimate Pattern Factory: FP, Haskell, Typeclassopedia vs Software Design Patterns](https://github.com/thma/LtuPatternFactory)
 - [Design Patterns in Haskell](http://blog.ezyang.com/2010/05/design-patterns-in-haskel/)
+
+- https://medium.com/barely-functional/freer-doesnt-come-for-free-c9fade793501
+- http://okmij.org/ftp/Haskell/extensible/more.pdf
+- http://ropas.snu.ac.kr/~bruno/papers/MonadZipper.pdf

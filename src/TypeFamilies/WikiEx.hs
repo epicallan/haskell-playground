@@ -1,6 +1,21 @@
-{-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE DataKinds            #-}
+{-# LANGUAGE FlexibleInstances    #-}
+{-# LANGUAGE KindSignatures       #-}
+{-# LANGUAGE PolyKinds            #-}
+{-# LANGUAGE ScopedTypeVariables  #-}
+{-# LANGUAGE TypeApplications     #-}
+{-# LANGUAGE TypeFamilies         #-}
+{-# LANGUAGE TypeOperators        #-}
+{-# LANGUAGE UndecidableInstances #-}
 -- | examples from ghc wiki
 module TypeFamilies.WikiEx where
+
+import Prelude hiding (lookup)
+
+import Data.Kind (Type)
+import Data.Monoid
+import Data.Proxy
+import GHC.TypeLits
 
 import qualified Data.IntMap as IntMap
 -- list like data family
@@ -27,4 +42,23 @@ instance GMapKey Int where
     empty = GMapInt IntMap.empty
     lookup k   (GMapInt m) = IntMap.lookup k m
     insert k v (GMapInt m) = GMapInt (IntMap.insert k v m)
+
+
+printVal :: (GMapKey a, Show b) => a -> GMap a b -> String
+printVal x gMap = show $ lookup x gMap
+
+gMap' :: GMap Int String
+gMap' = insert 1 "first-key" empty
+
+printEff :: IO ()
+printEff = putStrLn $ printVal 1 gMap'
+
+-- From paper
+
+type family AddF m n
+type instance AddF Int Float = Int
+type instance AddF Float Float = Int
+
+addF :: Int -> Float -> AddF Int Float
+addF x y = round $ fromIntegral x + y
 

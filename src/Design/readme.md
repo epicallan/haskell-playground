@@ -63,5 +63,9 @@ modify f = do
 - [Design Patterns in Haskell](http://blog.ezyang.com/2010/05/design-patterns-in-haskel/)
 
 - https://medium.com/barely-functional/freer-doesnt-come-for-free-c9fade793501
+
 - http://okmij.org/ftp/Haskell/extensible/more.pdf
+
 - http://ropas.snu.ac.kr/~bruno/papers/MonadZipper.pdf
+
+- https://jaspervdj.be/posts/2018-03-08-handle-pattern.html

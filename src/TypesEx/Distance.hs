@@ -47,6 +47,11 @@ data Distance a where
     MileDistance :: Double -> Distance Mile
 
 
+data DistanceF :: (LengthUnit -> * ) where
+  KDistance :: Double -> DistanceF 'KM
+  MDistance :: Double -> DistanceF 'Mile
+
+
 marathonDistance'' :: Distance Kilometer
 marathonDistance'' = KMDistance 42.195
 
@@ -56,3 +61,7 @@ distanceKmToMiles'' (KMDistance km) = MileDistance (0.621371 * km)
 
 marathonDistanceInMiles'' :: Distance Mile
 marathonDistanceInMiles'' = distanceKmToMiles'' marathonDistance''
+
+kmDistance :: DistanceF 'KM
+kmDistance = KDistance 43.3
+

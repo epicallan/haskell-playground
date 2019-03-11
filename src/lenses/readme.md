@@ -11,3 +11,5 @@
 - [lenses in MTL](http://hackage.haskell.org/package/microlens-mtl-0.1.11.1/docs/Lens-Micro-Mtl.html)
 
 - [lenses by example series](https://lens-by-example.chrispenner.ca/articles/traversals/writing-traversals)
+
+- [Let lens course](https://github.com/data61/lets-lens)

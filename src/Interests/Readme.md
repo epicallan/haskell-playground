@@ -41,3 +41,17 @@
 - [ ] Port [dante](https://github.com/jyp/dante) to vscode
 - [ ] When one uses `mixin` for custom prelude in a project, intero & dantes keep reporting missing prelude
 - [ ] [Property testing](https://www.fpcomplete.com/blog/quickcheck-hedgehog-validity)
+- [ ] [Exceptions tutorial from IH book](https://markkarpov.com/tutorial/exceptions.html)
+- [ ] [Haskell framework](https://github.com/Enecuum/Node)
+
+- [ ] fixing stack shadow dependencies error https://github.com/commercialhaskell/stack/issues/4107
+
+- [ ] http://hackage.haskell.org/package/overloaded-records
+
+- [ ] watch rio webinar https://www.fpcomplete.com/blog/rio-standard-library-for-haskell
+
+- [ ] [Aggregation with newtypes](https://tech.freckle.com/2017/09/22/aggregations/)
+
+- [ ] [A web framework that integrates Servant, EKG, fast-logger, wai-cli](https://github.com/myfreeweb/magicbane)
+
+- [ ] [Kind-safe framework for type-safe APIs  this is similar to servant](https://github.com/tel/serv)

@@ -1,7 +1,7 @@
 > {-# LANGUAGE TypeApplications #-}
 > {-# LANGUAGE RankNTypes #-}
 
-> module Proxy.Notes where 
+> module Proxy.Notes where
 > import Data.Tagged
 > import Data.Proxy
 
@@ -11,7 +11,7 @@ Proxy is a poly kinded proxy type
 
 Kind of proxy is
 
-< :K Proxy 
+< :K Proxy
 < Proxy :: k -> *
 
 This means k is poly kinded and we can pass any type to Proxy.
@@ -21,13 +21,13 @@ This means k is poly kinded and we can pass any type to Proxy.
 
 we can create any value of kind * by using undefined eg
 
-< let b = undefined :: Int 
+< let b = undefined :: Int
 
-but we cant do the same for 
+but we cant do the same for
 
 < let q = undefined :: (,)
 
-with Proxy we can overcome this 
+with Proxy we can overcome this
 
 < let q = Proxy :: Proxy (,)
 

@@ -2,10 +2,10 @@
 > {-# LANGUAGE KindSignatures #-}
 > {-#LANGUAGE GADTs #-}
 
-> module BookOfTypes.DataKinds.BuiltInTypes where 
+> module DataKinds.BuiltInTypes where
 
 
-The promoted version of a String is called a SYMBOL. 
+The promoted version of a String is called a SYMBOL.
 SYMBOLs are not lists of characters—they are completely distinct things
 
 Eg
@@ -13,7 +13,7 @@ Eg
 < :kind "hello"
 < "hello" :: Symbol
 
-Natural numbers are of Kind Nat 
+Natural numbers are of Kind Nat
 
 < :kind 5085072209
 < 5085072209 :: Nat

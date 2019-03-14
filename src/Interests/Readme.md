@@ -55,3 +55,17 @@
 - [ ] [A web framework that integrates Servant, EKG, fast-logger, wai-cli](https://github.com/myfreeweb/magicbane)
 
 - [ ] [Kind-safe framework for type-safe APIs  this is similar to servant](https://github.com/tel/serv)
+
+- [ ] [ Monadic parser combinator paper](http://www.cs.nott.ac.uk/~pszgmh/monparsing.pdf)
+- [ ] [HKD](http://h2.jaguarpaw.co.uk/posts/hkd-pattern-type-level-ski/)
+
+- [ ] [Opaleye has interesting type level programming](https://github.com/tomjaguarpaw/haskell-opaleye)
+
+- [ ] [Applying Type-Level and Generic Programming in Haskell](https://github.com/kosmikus/SSGEP/raw/master/LectureNotes.pdf)
+
+- [ ] [Deep dive into opaleye type level programming](https://ren.zone/articles/opaleye-sot)
+
+- [ ] [Type-Directed Code Generation](https://reasonablypolymorphic.com/blog/type-directed-code-generation/)
+
+- [ ] [reddit discussion on type level trickery](https://www.reddit.com/r/haskell/comments/86rv65/is_there_a_reasonably_comprehensive_introductory/)
+- [ ] []()

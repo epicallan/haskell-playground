@@ -10,7 +10,7 @@
 {-# LANGUAGE TypeOperators #-} 
 -- {-# LANGUAGE UndecidableInstances #-}
 
-module BookOfTypes.GADT.HList where
+module GADTs.HList where
 
 data HList (ts :: [*] ) where 
     HNil :: HList '[]

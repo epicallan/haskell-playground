@@ -1,5 +1,7 @@
 module Channels.Ex where
 
+import Prelude
+
 import           Control.Concurrent
 import           Control.Monad      (forever)
 

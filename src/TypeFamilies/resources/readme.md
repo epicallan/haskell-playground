@@ -1,4 +1,4 @@
-# Papers
+# Papers & blogs
 
 - [One Vote for Type Families
 in Haskell](https://www.iro.umontreal.ca/~monnier/tfp08.pdf)
@@ -8,3 +8,5 @@ in Haskell](https://www.iro.umontreal.ca/~monnier/tfp08.pdf)
 - [Type Families with Class, Type Classes with Family](http://bahr.io/pubs/files/serrano15haskell-paper.pdf)
 
 - [Intro to type families](http://www.mchaver.com/posts/2017-06-21-type-families.html)
+
+- [Type safe printf](https://kcsongor.github.io/symbol-parsing-haskell/)

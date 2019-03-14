@@ -3,7 +3,7 @@
 > {-# LANGUAGE KindSignatures #-}
 > {-#LANGUAGE GADTs #-}
 
-> module BookOfTypes.TypeFamilies where 
+> module TypeFamilies.TypeFamilies where 
 
 
 > or :: Bool -> Bool -> Bool 

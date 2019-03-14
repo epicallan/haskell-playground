@@ -2,7 +2,7 @@
 > {-# LANGUAGE KindSignatures #-}
 > {-#LANGUAGE GADTs #-}
 
-> module BookOfTypes.DataKinds.Notes where 
+> module DataKinds.Notes where
 
 Notes on Data kind
 
@@ -10,11 +10,11 @@ In my own words; data kinds extension allows one to define types of a data type 
 
 The extension provides a simple mechanism called promotion to populate the kind level of a data constructor.
 This may also mean that data constructors of a data type become constructors that can be constrained to particular
-types. 
+types.
 
 Another definiton / explanation for datakinds extension is (http://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html);
 
-The DataKinds extension allows us to promote data constructors into type constructors, which also promotes their type constructors into kind constructors. 
+The DataKinds extension allows us to promote data constructors into type constructors, which also promotes their type constructors into kind constructors.
 To promote something up a level, we prefix the name with an apostrophe, or tick: '.
 
 
@@ -32,7 +32,7 @@ with data kinds type promotion, vector kind level parameters can be constrained
 >   VCons :: a -> Vector n a -> Vector ('Succ n) a -- The inductive case is adding another value to a vector. One more value means one more length.
 
 Note that without DataKinds extention you have this kind of definition at type level.
-Because `Nat` construcors wouldn't be type constructors 
+Because `Nat` construcors wouldn't be type constructors
 
 < data Vector :: * -> * -> * where
 <  VNil :: Vector Nat a

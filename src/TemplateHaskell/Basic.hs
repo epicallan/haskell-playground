@@ -85,7 +85,7 @@ myFunc' = [|(+ 1)|]
 
 -----
 {-
- The most wonderful thing about quoters is that we can actually se splicing inside them
+ The most wonderful thing about quoters is that we can actually do splicing inside them
 -}
 
 add2 :: Q Exp
@@ -159,7 +159,7 @@ deriveCountableSimple name = [d|
     |]
     where
         a = conT name -- conT = return . ContT
-        -- ConT is a dta constructor of Type
+        -- ConT is a data constructor of Type
 
 -- Testing, import into a new file
 ------------------------

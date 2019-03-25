@@ -1,8 +1,10 @@
 > {-# LANGUAGE DataKinds #-}
 > {-# LANGUAGE KindSignatures #-}
 > {-#LANGUAGE GADTs #-}
+> {-# LANGUAGE PolyKinds #-}
 
 > module DataKinds.Notes where
+> import Data.Kind
 
 Notes on Data kind
 
@@ -37,3 +39,26 @@ Because `Nat` construcors wouldn't be type constructors
 < data Vector :: * -> * -> * where
 <  VNil :: Vector Nat a
 <  VCons :: a -> Vector n a -> Vector Nat a
+
+Kind polymorhism
+
+Proxy is by default supposed to take in a type of kind * meaning it wont work for all types.
+
+:k Proxy
+
+Proxy :: Type -> Type
+
+without PolyKind extension to enble kind polymorhisphm one would resort to such declarations
+
+> data Proxy1 a = MkProxy1
+> data Proxy2 (a :: Type -> Type) = MkProxy2
+
+used as below
+
+> stringRep = MkProxy1 :: Proxy1 String
+> maybeRep  = MkProxy2 :: Proxy2 Maybe
+
+with PolyKinds this is solved as below
+
+> stringRep' = MkProxy1 :: Proxy1 String
+> maybeRep' = MkProxy1 :: Proxy1 Maybe

@@ -22,7 +22,8 @@ cabal.project.local
 TAGS
 .vscode
 .DS_Store
-tiers/
 
 # cabal
 haskell-playground.cabal
+
+private/

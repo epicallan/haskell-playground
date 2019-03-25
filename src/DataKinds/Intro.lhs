@@ -33,3 +33,9 @@ Example
 
 > withLock :: Lock 'UnLocked -> (Lock 'Locked -> IO a) -> IO a
 > withLock = undefined
+
+A look at Maybe with DataKinds
+
+- a kind Maybe k
+- a type 'Just with type constructor 'Just :: k -> Maybe k
+- a type 'Nothing with type constructor 'Nothing :: Maybe k

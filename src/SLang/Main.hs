@@ -2,161 +2,161 @@
 
 module SLang.Main where
 
-import Protolude hiding (Prefix, check, many, try)
+-- import Protolude hiding (Prefix, check, many, try)
 
-import Control.Monad (fail, void)
-import Data.Maybe (fromJust)
-import Data.String (String)
-import Text.Megaparsec
-import Text.Megaparsec.Char
-import qualified Text.Megaparsec.Char.Lexer as L
-import Text.Megaparsec.Expr
+-- import Control.Monad (fail, void)
+-- import Data.Maybe (fromJust)
+-- import Data.String (String)
+-- import Text.Megaparsec
+-- import Text.Megaparsec.Char
+-- import qualified Text.Megaparsec.Char.Lexer as L
+-- import Text.Megaparsec.Expr
 
-import SLang.Types
-
-
-type Parser = Parsec Void String
-
--- space consumer
-sc :: Parser ()
-sc = L.space space1 lineCmnt blockCmnt
-  where
-    lineCmnt  = L.skipLineComment "//"
-    blockCmnt = L.skipBlockComment "/*" "*/"
+-- import SLang.Types
 
 
-lexeme :: Parser a -> Parser a
-lexeme = L.lexeme sc
+-- type Parser = Parsec Void String
 
-symbol :: String -> Parser String
-symbol = L.symbol sc
-
--- | 'parens' parses something between parenthesis.
-
-parens :: Parser a -> Parser a
-parens = between (symbol "(") (symbol ")")
-
--- | 'integer' parses an integer.
-
-integer :: Parser Integer
-integer = lexeme L.decimal
+-- -- space consumer
+-- sc :: Parser ()
+-- sc = L.space space1 lineCmnt blockCmnt
+--   where
+--     lineCmnt  = L.skipLineComment "//"
+--     blockCmnt = L.skipBlockComment "/*" "*/"
 
 
--- | 'semi' parses a semicolon.
+-- lexeme :: Parser a -> Parser a
+-- lexeme = L.lexeme sc
 
-semi :: Parser String
-semi = symbol ";"
+-- symbol :: String -> Parser String
+-- symbol = L.symbol sc
 
--- | To parse various operators we can just use symbol, but reserved words and identifiers are a bit trickier. There are two things to note:
+-- -- | 'parens' parses something between parenthesis.
 
--- Parsers for reserved words should check that the parsed reserved word is not a prefix of an identifier.
+-- parens :: Parser a -> Parser a
+-- parens = between (symbol "(") (symbol ")")
 
--- Parsers of identifiers should check that parsed identifier is not a reserved word.
+-- -- | 'integer' parses an integer.
 
-rword :: String -> Parser ()
-rword w = (lexeme . try) (string w *> notFollowedBy alphaNumChar)
-
-rws :: [String] -- list of reserved words
-rws = ["if","then","else","while","do","skip","true","false","not","and","or"]
-
-identifier :: Parser String
-identifier = (lexeme . try) (p >>= check)
-  where
-    p       = (:) <$> letterChar <*> many alphaNumChar
-    check x = if x `elem` rws
-                then fail $ "keyword " ++ show x ++ " cannot be an identifier"
-                else return x
+-- integer :: Parser Integer
+-- integer = lexeme L.decimal
 
 
-whileParser :: Parser Stmt
-whileParser = between sc eof stmt
+-- -- | 'semi' parses a semicolon.
 
-stmt :: Parser Stmt
-stmt = f <$> sepBy1 stmt' semi
-  where
-    -- if there's only one stmt return it without using ‘Seq’
-    f l = if length l == 1 then fromJust (head l) else Seq l
+-- semi :: Parser String
+-- semi = symbol ";"
+
+-- -- | To parse various operators we can just use symbol, but reserved words and identifiers are a bit trickier. There are two things to note:
+
+-- -- Parsers for reserved words should check that the parsed reserved word is not a prefix of an identifier.
+
+-- -- Parsers of identifiers should check that parsed identifier is not a reserved word.
+
+-- rword :: String -> Parser ()
+-- rword w = (lexeme . try) (string w *> notFollowedBy alphaNumChar)
+
+-- rws :: [String] -- list of reserved words
+-- rws = ["if","then","else","while","do","skip","true","false","not","and","or"]
+
+-- identifier :: Parser String
+-- identifier = (lexeme . try) (p >>= check)
+--   where
+--     p       = (:) <$> letterChar <*> many alphaNumChar
+--     check x = if x `elem` rws
+--                 then fail $ "keyword " ++ show x ++ " cannot be an identifier"
+--                 else return x
 
 
-stmt' :: Parser Stmt
-stmt' = ifStmt
-    <|> whileStmt
-    <|> skipStmt
-    <|> assignStmt
-    <|> parens stmt
+-- whileParser :: Parser Stmt
+-- whileParser = between sc eof stmt
+
+-- stmt :: Parser Stmt
+-- stmt = f <$> sepBy1 stmt' semi
+--   where
+--     -- if there's only one stmt return it without using ‘Seq’
+--     f l = if length l == 1 then fromJust (head l) else Seq l
 
 
-ifStmt :: Parser Stmt
-ifStmt = do
-    rword "if"
-    cond  <- bExpr
-    rword "then"
-    stmt1 <- stmt
-    rword "else"
-    stmt2 <- stmt
-    return (If cond stmt1 stmt2)
+-- stmt' :: Parser Stmt
+-- stmt' = ifStmt
+--     <|> whileStmt
+--     <|> skipStmt
+--     <|> assignStmt
+--     <|> parens stmt
 
-whileStmt :: Parser Stmt
-whileStmt = do
-    rword "while"
-    cond <- bExpr
-    rword "do"
-    stmt1 <- stmt
-    return (While cond stmt1)
 
-assignStmt :: Parser Stmt
-assignStmt = do
-    var  <- identifier
-    void (symbol ":=")
-    expr <- aExpr
-    return (Assign var expr)
+-- ifStmt :: Parser Stmt
+-- ifStmt = do
+--     rword "if"
+--     cond  <- bExpr
+--     rword "then"
+--     stmt1 <- stmt
+--     rword "else"
+--     stmt2 <- stmt
+--     return (If cond stmt1 stmt2)
 
-skipStmt :: Parser Stmt
-skipStmt = Skip <$ rword "skip"
+-- whileStmt :: Parser Stmt
+-- whileStmt = do
+--     rword "while"
+--     cond <- bExpr
+--     rword "do"
+--     stmt1 <- stmt
+--     return (While cond stmt1)
 
-aExpr :: Parser AExpr
-aExpr = makeExprParser aTerm aOperators
+-- assignStmt :: Parser Stmt
+-- assignStmt = do
+--     var  <- identifier
+--     void (symbol ":=")
+--     expr <- aExpr
+--     return (Assign var expr)
 
-bExpr :: Parser BExpr
-bExpr = makeExprParser bTerm bOperators
+-- skipStmt :: Parser Stmt
+-- skipStmt = Skip <$ rword "skip"
 
-aOperators :: [[Operator Parser AExpr]]
-aOperators =
-  [ [Prefix (Neg <$ symbol "-") ]
-  , [ InfixL (ABinary Multiply <$ symbol "*")
-    , InfixL (ABinary Divide   <$ symbol "/") ]
-  , [ InfixL (ABinary Add      <$ symbol "+")
-    , InfixL (ABinary Subtract <$ symbol "-") ]
-  ]
+-- aExpr :: Parser AExpr
+-- aExpr = makeExprParser aTerm aOperators
 
-bOperators :: [[Operator Parser BExpr]]
-bOperators =
-  [ [Prefix (Not <$ rword "not") ]
-  , [InfixL (BBinary And <$ rword "and")
-    , InfixL (BBinary Or <$ rword "or") ]
-  ]
+-- bExpr :: Parser BExpr
+-- bExpr = makeExprParser bTerm bOperators
 
--- arithmetic expressions,
-aTerm :: Parser AExpr
-aTerm = parens aExpr
-  <|> Var      <$> identifier
-  <|> IntConst <$> integer
+-- aOperators :: [[Operator Parser AExpr]]
+-- aOperators =
+--   [ [Prefix (Neg <$ symbol "-") ]
+--   , [ InfixL (ABinary Multiply <$ symbol "*")
+--     , InfixL (ABinary Divide   <$ symbol "/") ]
+--   , [ InfixL (ABinary Add      <$ symbol "+")
+--     , InfixL (ABinary Subtract <$ symbol "-") ]
+--   ]
 
--- a Boolean expression  parser
-bTerm :: Parser BExpr
-bTerm =  parens bExpr
-    <|> (BoolConst True  <$ rword "true")
-    <|> (BoolConst False <$ rword "false")
-    <|> rExpr
+-- bOperators :: [[Operator Parser BExpr]]
+-- bOperators =
+--   [ [Prefix (Not <$ rword "not") ]
+--   , [InfixL (BBinary And <$ rword "and")
+--     , InfixL (BBinary Or <$ rword "or") ]
+--   ]
 
--- relation expression parser
-rExpr :: Parser BExpr
-rExpr = do
-    a1 <- aExpr
-    op <- relation
-    a2 <- aExpr
-    return (RBinary op a1 a2)
+-- -- arithmetic expressions,
+-- aTerm :: Parser AExpr
+-- aTerm = parens aExpr
+--   <|> Var      <$> identifier
+--   <|> IntConst <$> integer
 
-relation :: Parser RBinOp
-relation = (symbol ">" *> pure Greater)
-    <|> (symbol "<" *> pure Less)
+-- -- a Boolean expression  parser
+-- bTerm :: Parser BExpr
+-- bTerm =  parens bExpr
+--     <|> (BoolConst True  <$ rword "true")
+--     <|> (BoolConst False <$ rword "false")
+--     <|> rExpr
+
+-- -- relation expression parser
+-- rExpr :: Parser BExpr
+-- rExpr = do
+--     a1 <- aExpr
+--     op <- relation
+--     a2 <- aExpr
+--     return (RBinary op a1 a2)
+
+-- relation :: Parser RBinOp
+-- relation = (symbol ">" *> pure Greater)
+--     <|> (symbol "<" *> pure Less)

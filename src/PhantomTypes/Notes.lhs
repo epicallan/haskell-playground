@@ -22,4 +22,24 @@ Hence the name phantom type.
 
 Phantom types enable us to write more type safe code, make invalid states less likely to exist.
 
-TODO: https://blog.jle.im/entry/introduction-to-singletons-1.html
+Use case example for tagging boolean data http://oleg.fi/gists/posts/2019-03-21-flag.html
+
+given a function that uses boolean flags
+
+myFun :: Bool -> Bool -> Bool -> IO ()
+
+> newtype Flag t = MkFlag Bool
+
+> toFlag :: t -> Bool -> Flag t
+> toFlag _ = MkFlag
+
+> fromFlag :: t -> Flag t -> Bool
+> fromFlag _ (MkFlag b) = b
+
+> data ShowGlobal = ShowGlobal
+> data ShowFlags = ShowFlags
+> data ShowLogs = ShowLogs
+
+> myFun :: Flag ShowLogs -> Flag ShowGlobal -> Flag ShowFlags -> IO ()
+> myFun = error "do me"
+

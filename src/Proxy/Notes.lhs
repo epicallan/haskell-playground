@@ -1,9 +1,11 @@
 > {-# LANGUAGE TypeApplications #-}
 > {-# LANGUAGE RankNTypes #-}
 
+
 > module Proxy.Notes where
 > import Data.Tagged
 > import Data.Proxy
+> import Data.Kind
 
 This notes are largely refrenced from https://kseo.github.io/posts/2017-01-15-data-proxy.html
 
@@ -44,3 +46,18 @@ can also be solved by TypeApplications
 
 < f :: forall a. (Read a, Show a) => String -> String
 < f s = show (read @Int s)
+
+Proxy allows us to safely pass dummy phantom arguments into functions.
+
+> data Q
+
+> class Modulus a where
+>   value :: Proxy a -> Int
+
+> instance Modulus Q where
+>   value _ = 5
+
+> fm :: Int -> Int -> Int
+> fm x y = (x + y) `mod`  (value (Proxy :: Proxy Q))
+
+

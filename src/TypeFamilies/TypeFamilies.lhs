@@ -3,10 +3,10 @@
 > {-# LANGUAGE KindSignatures #-}
 > {-#LANGUAGE GADTs #-}
 
-> module TypeFamilies.TypeFamilies where 
+> module TypeFamilies.TypeFamilies where
 
 
-> or :: Bool -> Bool -> Bool 
+> or :: Bool -> Bool -> Bool
 > or True _  = True
 > or False y = y
 
@@ -25,9 +25,9 @@ exercise: a closed type family to compute and
 >   Add 'False y = 'False
 
 
-< type family Foo (x :: Bool) (y :: Bool) :: Bool 
+< type family Foo (x :: Bool) (y :: Bool) :: Bool
 
-Kind for Foo is Bool -> Bool -> Bool 
+Kind for Foo is Bool -> Bool -> Bool
 
 < type family Bar x y :: Bool -> Bool -> Bool
 

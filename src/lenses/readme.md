@@ -13,3 +13,4 @@
 - [lenses by example series](https://lens-by-example.chrispenner.ca/articles/traversals/writing-traversals)
 
 - [Let lens course](https://github.com/data61/lets-lens)
+- [https://blog.jle.im/entry/lenses-products-prisms-sums.html](Lenses embody Products, Prisms embody Sums)

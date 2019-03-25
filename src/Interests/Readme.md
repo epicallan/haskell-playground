@@ -21,7 +21,7 @@
 - [ ] [Haskell IDE engine](https://github.com/haskell/haskell-ide-engine)
 - [ ] consider writing apps following [real world](https://github.com/gothinkster/realworld) spec using a variety of haskell design pattern eg https://github.com/boxyoman/haskell-realworld-example
 - [ ] Possibly create [NetlifyCMS](https://github.com/netlify/netlify-cms) but in haskell for interfacing with Hakyll site
-- [ ] Automatically generating Servant API docs
+- [x] Automatically generating Servant API docs
 - Summoner support multi project set up i.e mono repo.
 - [read Type theory formal proof introduction](https://www.amazon.com/Type-Theory-Formal-Proof-Introduction)
 
@@ -44,11 +44,11 @@
 - [ ] [Exceptions tutorial from IH book](https://markkarpov.com/tutorial/exceptions.html)
 - [ ] [Haskell framework](https://github.com/Enecuum/Node)
 
-- [ ] fixing stack shadow dependencies error https://github.com/commercialhaskell/stack/issues/4107
+- [x] [fixing stack shadow dependencies error](https://github.com/commercialhaskell/stack/issues/4107)
 
 - [ ] http://hackage.haskell.org/package/overloaded-records
 
-- [ ] watch rio webinar https://www.fpcomplete.com/blog/rio-standard-library-for-haskell
+- [ ] [watch rio webinar](https://www.fpcomplete.com/blog/rio-standard-library-for-haskell)
 
 - [ ] [Aggregation with newtypes](https://tech.freckle.com/2017/09/22/aggregations/)
 
@@ -68,4 +68,20 @@
 - [ ] [Type-Directed Code Generation](https://reasonablypolymorphic.com/blog/type-directed-code-generation/)
 
 - [ ] [reddit discussion on type level trickery](https://www.reddit.com/r/haskell/comments/86rv65/is_there_a_reasonably_comprehensive_introductory/)
-- [ ] []()
+- [ ] [Intro to Singletons](https://blog.jle.im/entry/introduction-to-singletons-1.html)
+- [ ] [Comprehensive framework to build network actors and distributed applications](https://github.com/Enecuum/Node)
+- [ ] [Visible dependent quantification in Haskell](Visible dependednt quantification)
+- [x] [Haskell kind system](https://diogocastro.com/blog/2018/10/17/haskells-kind-system-a-primer/)
+- [ ] [Tagless Final Encoding in Haskell](https://jproyo.github.io/posts/2019-03-17-tagless-final-haskell.html)
+- [ ] [https://www.tweag.io/posts/2019-03-20-capability-free-monad.html](Capability is about free monads.)
+- [ ] [recursion schemes in action](https://blog.jle.im/entry/tries-with-recursion-schemes.html)
+- [ ] [Micro services with too many types](https://gist.github.com/i-am-tom/20bc844acba06c7be83537c0df084455)
+- [ ] [GHC extensions exercises](https://github.com/i-am-tom/haskell-exercises)
+- [ ] [Heterogeneous lists with dependent types](https://blog.poisson.chat/posts/2018-06-06-hlists-dependent-haskell.html)
+- [ ] [some type level programming](https://github.com/i-am-tom/learn-me-a-haskell)
+- [ ] [Type Tac Toe: Advanced Type Safety ](https://chrispenner.ca/posts/type-tac-toe)
+- [ ] [why servant is a type safe DSL ](https://www.servant.dev/posts/2018-07-12-servant-dsl-typelevel.html)
+- [ ] [Servant intro](https://arow.info/blog/posts/2015-07-10-servant-intro.html)
+- [ ] [State of haskell 2016](http://www.stephendiehl.com/posts/haskell_2017.html)
+- [x] [Custom infix operators in haskell](https://bugfactory.io/2015/03/31/custom-infix-operators-in-haskell/)
+- [ ] [Typed Index vectors](https://blog.jle.im/entry/fixed-length-vector-types-in-haskell.html)

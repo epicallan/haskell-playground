@@ -85,3 +85,13 @@
 - [ ] [State of haskell 2016](http://www.stephendiehl.com/posts/haskell_2017.html)
 - [x] [Custom infix operators in haskell](https://bugfactory.io/2015/03/31/custom-infix-operators-in-haskell/)
 - [ ] [Typed Index vectors](https://blog.jle.im/entry/fixed-length-vector-types-in-haskell.html)
+- [ ] [Optics](https://github.com/cohomolo-gy/optics-resources)
+
+- [functional_pearls](https://www.reddit.com/r/haskell/comments/9cyzzb/must_readfavourite_functional_pearls/)
+- [Resources & papers](https://github.com/cohomolo-gy/haskell-resources/blob/master/README.md)
+- [Singletons paper](https://cs.brynmawr.edu/~rae/papers/2012/singletons/paper.pdf)
+
+- [types intro primer](https://diogocastro.com/blog/2018/10/17/haskells-kind-system-a-primer/#hofs-and-hkts)
+
+- [Resources & papers(https://github.com/cohomolo-gy/haskell-resources/blob/master/README.md)
+

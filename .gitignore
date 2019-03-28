@@ -26,4 +26,4 @@ TAGS
 # cabal
 haskell-playground.cabal
 
-private/
+Private/

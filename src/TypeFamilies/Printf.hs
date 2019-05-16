@@ -15,8 +15,8 @@ import Prelude hiding (lookup)
 import Data.Kind (Type)
 import Data.Proxy
 import GHC.TypeLits
--- | Type constructor for generating an Heterogeneous kinded linked list
 
+-- | Type constructor for generating an Heterogeneous kinded linked list
 data (a :: k1) :<< (b :: k2)
 infixr 5 :<<
 

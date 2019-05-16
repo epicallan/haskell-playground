@@ -30,6 +30,7 @@ library:
   - template-haskell
   - temporary
   - text
+  - time
   - vinyl
 default-extensions:
   - LambdaCase
@@ -40,3 +41,10 @@ default-extensions:
   - TypeApplications
   - MultiParamTypeClasses
   - RecordWildCards
+  - TypeApplications
+  - TypeFamilies
+  - GADTs
+  - PolyKinds
+  - DataKinds
+  - UndecidableInstances
+  - KindSignatures

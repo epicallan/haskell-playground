@@ -3,7 +3,7 @@
 > module Existential.Notes where
 
 An existentially quantified type is one that is hidden to the user/consumer but directly
-chosen by the produced.
+chosen by the producer.
 
 eg
 

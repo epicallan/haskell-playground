@@ -95,3 +95,29 @@
 
 - [Resources & papers(https://github.com/cohomolo-gy/haskell-resources/blob/master/README.md)
 
+- [The constraint trick for instances ](https://chrisdone.com/posts/haskell-constraint-trick/)
+
+- [Constrained Type Families](https://cs.brynmawr.edu/~rae/papers/2017/partiality/partiality.pdf)
+
+- [Instance Chains: Type Class ProgrammingWithout Overlapping Instances](http://web.cecs.pdx.edu/~mpj/pubs/instancechains.pdf)
+
+- [A Practical Introduction to Haskell GADTs](https://github.com/goldfirere/glambda) extension https://www.reddit.com/r/haskell/comments/8jcmnd/stitch_a_longform_examplecase_study_of_using/ & paper https://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.pdf
+
+- [Sequel an advanced typed postgresql library](https://github.com/morphismtech/squeal)
+
+- https://stackoverflow.com/questions/6398996/good-haskell-source-to-read-and-learn-from
+
+- https://github.com/azimuth-project/applied-category-theory-course
+
+- https://www.parsonsmatt.org/2015/11/15/template_haskell.html
+-[Monad base control](https://www.yesodweb.com/book/monad-control)
+- https://kowainik.github.io/posts/2018-07-11-typerep-map-step-by-step
+- https://github.com/bradparker/servant-beam-realworld-example-app
+- https://github.com/chicagohaskell/servant-presentation/blob/master/src/Todo/Core.hs
+
+- https://discourse.haskell.org/t/adventures-assembling-records-of-capabilities/623?u=taylorfausak
+- https://williamyaoh.com/posts/2019-04-25-lens-exercises.html
+- http://www.stephendiehl.com/posts/essential_haskell.html
+- https://github.com/lotz84/haskell (haskell study guide notes)
+- https://github.com/jfischoff/asynchronous-email-example (Example web server to show how to use a bounded queue to asynchronously send emails )
+- http://www.well-typed.com/blog/2019/05/integrated-shrinking/ (Property testing)

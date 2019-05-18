@@ -13,11 +13,11 @@ data (a :: Type) :> (b :: Type) = a :> b
 
 data Method = Get | Post
 
-data Verb = Verb Method
+newtype Verb = Verb Method
 
 data Capture a = Capture
 
-data Static = Static String
+newtype Static = Static String
 
 -- a class to specify all the valid endpoint descriptions
 

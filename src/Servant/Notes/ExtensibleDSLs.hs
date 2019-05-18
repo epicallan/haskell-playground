@@ -11,7 +11,7 @@ How can we reasonably easily (that is, in Haskell 98) achieve full extensibility
 
 -- our expression constructs, one data type per
 -- constructor we had previously.
-data I = I Integer
+newtype I = I Integer
 
 data Add a b = Add a b
 

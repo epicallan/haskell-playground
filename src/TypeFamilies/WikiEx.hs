@@ -3,7 +3,6 @@
 {-# LANGUAGE KindSignatures       #-}
 {-# LANGUAGE PolyKinds            #-}
 {-# LANGUAGE ScopedTypeVariables  #-}
-{-# LANGUAGE TypeApplications     #-}
 {-# LANGUAGE TypeFamilies         #-}
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE UndecidableInstances #-}
@@ -13,11 +12,9 @@ module TypeFamilies.WikiEx where
 import Prelude hiding (lookup)
 
 import Data.Kind (Type)
-import Data.Monoid
-import Data.Proxy
-import GHC.TypeLits
 
 import qualified Data.IntMap as IntMap
+
 -- list like data family
 data family XList a
 
@@ -30,7 +27,7 @@ data instance XList () = XListUnit Int
 -- | associtated data type families
 
 class GMapKey k where
-    data GMap k :: * -> *
+    data GMap k :: Type -> Type
     empty       :: GMap k v
     lookup      :: k -> GMap k v -> Maybe v
     insert      :: k -> v -> GMap k v -> GMap k v
@@ -61,4 +58,3 @@ type instance AddF Float Float = Int
 
 addF :: Int -> Float -> AddF Int Float
 addF x y = round $ fromIntegral x + y
-

@@ -12,7 +12,6 @@ import Data.Kind
 import Data.Proxy
 import Data.Time
 import GHC.TypeLits
-import Text.Read
 
 -- API specifications
 
@@ -58,7 +57,7 @@ type MyAPI =
 
   where [String] is a sequence of path components
 
-  serve :: HasServer layout => Proxy layout _> Server layout -> [String] -> IO String
+  serve :: HasServer layout => Proxy layout -> Server layout -> [String] -> IO String
 
   * Server is a type family
   * HasServer is a class with instance for API types

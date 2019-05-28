@@ -1,19 +1,19 @@
-{-# LANGUAGE DataKinds                      #-}
-{-# LANGUAGE EmptyCase                      #-}
-{-# LANGUAGE GADTs                          #-}
-{-# LANGUAGE InstanceSigs                   #-}
-{-# LANGUAGE KindSignatures                 #-}
-{-# LANGUAGE LambdaCase                     #-}
-{-# LANGUAGE MultiParamTypeClasses          #-}
-{-# LANGUAGE RankNTypes                     #-}
-{-# LANGUAGE ScopedTypeVariables            #-}
-{-# LANGUAGE StandaloneDeriving             #-}
-{-# LANGUAGE TemplateHaskell                #-}
-{-# LANGUAGE TypeApplications               #-}
-{-# LANGUAGE TypeFamilies                   #-}
-{-# LANGUAGE TypeInType                     #-}
-{-# LANGUAGE TypeOperators                  #-}
-{-# LANGUAGE UndecidableInstances           #-}
+{-# LANGUAGE DataKinds             #-}
+{-# LANGUAGE EmptyCase             #-}
+{-# LANGUAGE GADTs                 #-}
+{-# LANGUAGE InstanceSigs          #-}
+{-# LANGUAGE KindSignatures        #-}
+{-# LANGUAGE LambdaCase            #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE RankNTypes            #-}
+{-# LANGUAGE ScopedTypeVariables   #-}
+{-# LANGUAGE StandaloneDeriving    #-}
+{-# LANGUAGE TemplateHaskell       #-}
+{-# LANGUAGE TypeApplications      #-}
+{-# LANGUAGE TypeFamilies          #-}
+{-# LANGUAGE TypeInType            #-}
+{-# LANGUAGE TypeOperators         #-}
+{-# LANGUAGE UndecidableInstances  #-}
 {-# OPTIONS_GHC -Wall                       #-}
 {-# OPTIONS_GHC -Werror=incomplete-patterns #-}
 
@@ -21,11 +21,11 @@
 
 module Singleton.Door3 where
 
-import           Data.Kind
-import           Data.Singletons
-import           Data.Singletons.Prelude hiding (And, Or)
-import           Data.Singletons.TH
-import           Data.Void
+import Data.Kind
+import Data.Singletons
+import Data.Singletons.Prelude hiding (And, Or)
+import Data.Singletons.TH
+import Data.Void
 
 $(singletons [d|
   data DoorState = Opened | Closed | Locked

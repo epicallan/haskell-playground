@@ -8,16 +8,16 @@
 {-# LANGUAGE ScopedTypeVariables  #-}
 {-# LANGUAGE StandaloneDeriving   #-}
 {-# LANGUAGE TemplateHaskell      #-}
+{-# LANGUAGE TypeApplications     #-}
 {-# LANGUAGE TypeFamilies         #-}
-{-# Language TypeApplications     #-}
-{-# Language TypeInType     #-}
+{-# LANGUAGE TypeInType           #-}
 {-# LANGUAGE UndecidableInstances #-}
 
 module Singleton.Notes where
 
-import           Data.Kind
-import           Data.Singletons
-import           Data.Singletons.TH
+import Data.Kind
+import Data.Singletons
+import Data.Singletons.TH
 
 {-|
 source https://blog.jle.im/entry/introduction-to-singletons-1.html
@@ -46,7 +46,7 @@ doorStatus SClosed _ = Closed
 doorStatus SLocked _ = Locked
 
 
-lockAnyDoor :: Sing s -> (Door s -> Door 'Locked)
+lockAnyDoor :: Sing s -> Door s -> Door 'Locked
 lockAnyDoor sings door = case sings of
     SOpened -> lockDoor . closeDoor $ door
     SClosed -> lockDoor door
@@ -290,7 +290,7 @@ instance SingKind k => SingKind (List k) where
   type Demote (List k) = List (Demote k)
 
   fromSing :: Sing (xs :: List k) -> List (Demote k)
-  fromSing SNil = Nil
+  fromSing SNil         = Nil
   fromSing (SCons x xs) = Cons (fromSing x) (fromSing xs)
 
   toSing :: List (Demote k) -> SomeSing (List k)
@@ -390,7 +390,7 @@ disproveOpened k = case k of {}             -- empty pattern match
 
 knockSomeDoor :: SomeDoor -> IO ()
 knockSomeDoor (MkSomeDoor s d) = case isKnockable s of
-  DProved k -> knock k d
+  DProved k    -> knock k d
   DDisproved _ -> putStrLn "No knocking allowed"
 
 {-

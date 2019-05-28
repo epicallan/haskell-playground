@@ -122,3 +122,7 @@
 - https://github.com/jfischoff/asynchronous-email-example
 (Example web server to show how to use a bounded queue to asynchronously send emails )
 - http://www.well-typed.com/blog/2019/05/integrated-shrinking/ (Property testing)
+
+- Squeal, a deep embedding of SQL in Haskell  https://github.com/morphismtech/squeal
+
+- optimizing haskell CI builds https://twitter.com/importantshock/status/1131968275775152134

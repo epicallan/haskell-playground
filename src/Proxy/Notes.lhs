@@ -3,9 +3,7 @@
 
 
 > module Proxy.Notes where
-> import Data.Tagged
 > import Data.Proxy
-> import Data.Kind
 
 This notes are largely refrenced from https://kseo.github.io/posts/2017-01-15-data-proxy.html
 
@@ -59,5 +57,3 @@ Proxy allows us to safely pass dummy phantom arguments into functions.
 
 > fm :: Int -> Int -> Int
 > fm x y = (x + y) `mod`  (value (Proxy :: Proxy Q))
-
-

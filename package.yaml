@@ -25,6 +25,7 @@ library:
   - megaparsec
   - protolude
   - singletons
+  - resourcet
   - universum
   - tagged
   - template-haskell
@@ -51,3 +52,14 @@ default-extensions:
   - TypeOperators
   - UndecidableInstances
   - KindSignatures
+
+ghc-options:
+  - -Wall
+  - -Werror
+  - -Wincomplete-uni-patterns
+  - -Wincomplete-record-updates
+  - -Wcompat
+  - -Widentities
+  - -Wredundant-constraints
+  - -fhide-source-paths
+  - -Wpartial-fields

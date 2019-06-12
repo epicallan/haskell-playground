@@ -55,10 +55,16 @@ without PolyKind extension to enble kind polymorhisphm one would resort to such 
 
 used as below
 
+> stringRep :: Proxy1 String
 > stringRep = MkProxy1 :: Proxy1 String
+
+> maybeRep  :: Proxy2 Maybe
 > maybeRep  = MkProxy2 :: Proxy2 Maybe
 
 with PolyKinds this is solved as below
 
+> stringRep' ::  Proxy1 String
 > stringRep' = MkProxy1 :: Proxy1 String
+
+> maybeRep' :: Proxy1 Maybe
 > maybeRep' = MkProxy1 :: Proxy1 Maybe

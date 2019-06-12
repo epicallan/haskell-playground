@@ -103,6 +103,8 @@
 
 - [A Practical Introduction to Haskell GADTs](https://github.com/goldfirere/glambda) extension https://www.reddit.com/r/haskell/comments/8jcmnd/stitch_a_longform_examplecase_study_of_using/ & paper https://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.pdf
 
+code : http://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.tar.gz
+
 - [Sequel an advanced typed postgresql library](https://github.com/morphismtech/squeal)
 
 - https://stackoverflow.com/questions/6398996/good-haskell-source-to-read-and-learn-from
@@ -126,3 +128,9 @@
 - Squeal, a deep embedding of SQL in Haskell  https://github.com/morphismtech/squeal
 
 - optimizing haskell CI builds https://twitter.com/importantshock/status/1131968275775152134
+- [On the arity of type families](https://ryanglscott.github.io/2019/05/26/on-the-arity-of-type-families/)
+- Using deriving VIA for record problems  https://github.com/jmackie/HandyHaskell/blob/master/ObjectLike.hsx
+
+- [Data types`alacarte](http://www.cs.ru.nl/~W.Swierstra/Publications/DataTypesALaCarte.pdf)
+
+- [Optics](https://github.com/hablapps/DontFearTheProfunctorOptics)

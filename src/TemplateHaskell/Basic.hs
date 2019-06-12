@@ -1,18 +1,17 @@
 -- source https://markkarpov.com/tutorial/th.html
-{-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE DeriveLift #-}
-{-# LANGUAGE DeriveDataTypeable #-}
+{-# LANGUAGE DeriveDataTypeable   #-}
+{-# LANGUAGE DeriveLift           #-}
+{-# LANGUAGE TemplateHaskell      #-}
 {-# LANGUAGE UndecidableInstances #-}
 
 module TemplateHaskell.Basic where
 
-import Control.Monad
-import Data.Proxy
 import Data.Data (Data)
+import Data.Proxy
 import Data.String (IsString (..))
-import Data.Typeable (cast, Typeable)
 import Data.Text (Text)
 import qualified Data.Text as T
+import Data.Typeable (Typeable, cast)
 import Language.Haskell.TH
 import Language.Haskell.TH.Syntax
 

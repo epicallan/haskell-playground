@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-redundant-constraints #-}
 module Servant.Notes.ExtensibleDSLs where
 
 {-

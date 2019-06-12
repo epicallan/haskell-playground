@@ -1,4 +1,5 @@
 >  {-# LANGUAGE RankNTypes #-}
+> {-# OPTIONS_GHC -Wno-type-defaults #-}
 > module RankN.Notes where
 
 TODO: go through https://ocharles.org.uk/blog/guest-posts/2014-12-18-rank-n-types.html
@@ -27,7 +28,7 @@ to get this working we need to make tupleF to take a polymorphic function
 
 < tupleF' show (True, [2, 3, 5])
 
-
+> main :: IO ()
 > main = do
 >   print $ tupleF' show (True, [2, 3, 5])
 >   print $ tupleF' show (1, [2, 3, 5])

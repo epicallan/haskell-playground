@@ -7,11 +7,11 @@
 {-# LANGUAGE ScopedTypeVariables  #-}
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE UndecidableInstances #-}
-
+{-# OPTIONS_GHC -Wno-redundant-constraints #-}
 #if __GLASGOW_HASKELL__ < 708
 #error "requires GHC 7.10 or newer"
 #endif
-module Overlap.TypeFamilies (main) where
+module Overlap.TypeFamilies  where
 
 import qualified Data.Text as T
 import Data.Type.Equality

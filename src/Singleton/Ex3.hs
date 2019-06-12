@@ -3,6 +3,7 @@
 {-# LANGUAGE TemplateHaskell  #-}
 {-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE TypeInType       #-}
+{-# OPTIONS_GHC -Wno-redundant-constraints #-}
 module Singleton.Ex3 where
 
 import Data.Kind

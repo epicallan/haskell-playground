@@ -1,20 +1,15 @@
-{-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE DataKinds #-}
-{-# LANGUAGE TypeFamilies #-}
-{-# LANGUAGE GADTs #-}
-{-# LANGUAGE PolyKinds #-}
+{-# LANGUAGE DataKinds          #-}
+{-# LANGUAGE GADTs              #-}
+{-# LANGUAGE PolyKinds          #-}
 {-# LANGUAGE StandaloneDeriving #-}
+{-# LANGUAGE TemplateHaskell    #-}
+{-# LANGUAGE TypeFamilies       #-}
 
 module Vinyl.Example where
 
-import Data.Vinyl
-import Data.Vinyl.Functor
-import Control.Applicative
 import Control.Lens hiding (Identity)
-import Control.Lens.TH
-import Data.Char
 import Data.Singletons.TH (genSingletons)
-import Data.Maybe
+import Data.Vinyl
 
 
 data Fields = Name | Age | Sleeping | Master deriving Show
@@ -44,10 +39,10 @@ newtype Attr f = Attr { _unAttr :: ElF f }
 makeLenses ''Attr
 genSingletons [ ''Fields ]
 
-instance Show (Attr Name) where show (Attr x) = "name: " ++ show x
-instance Show (Attr Age) where show (Attr x) = "age: " ++ show x
-instance Show (Attr Sleeping) where show (Attr x) = "sleeping: " ++ show x
-instance Show (Attr Master) where show (Attr x) = "master: " ++ show x
+instance Show (Attr 'Name) where show (Attr x) = "name: " ++ show x
+instance Show (Attr 'Age) where show (Attr x) = "age: " ++ show x
+instance Show (Attr 'Sleeping) where show (Attr x) = "sleeping: " ++ show x
+instance Show (Attr 'Master) where show (Attr x) = "master: " ++ show x
 
 
 -- To make field construction easier, we define an operator.  The first
@@ -65,7 +60,7 @@ instance Show (Attr Master) where show (Attr x) = "master: " ++ show x
 (=::) :: sing f -> ElF f -> Attr f
 _ =:: x = Attr x
 
-type Person = [Name, Age, Sleeping]
+type Person = ['Name, 'Age, 'Sleeping]
 
 jon :: Rec Attr Person
 jon = SName =:: "jon"

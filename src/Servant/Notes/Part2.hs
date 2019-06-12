@@ -1,5 +1,6 @@
 {-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE TypeOperators    #-}
+{-# OPTIONS_GHC -Wno-redundant-constraints #-}
 
 module Servant.Notes.Part2 where
 

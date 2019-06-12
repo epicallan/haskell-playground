@@ -1,9 +1,7 @@
 module Channels.Ex where
 
-import Prelude
-
-import           Control.Concurrent
-import           Control.Monad      (forever)
+import Control.Concurrent
+import Control.Monad (forever)
 
 
 data AskForMeow = GibFood | Smile
@@ -25,7 +23,7 @@ main = do
   foodInputChan <- newChan
   catOutputChan <- newChan
 
-  cat $ meowMe foodInputChan catOutputChan -- forked and would have been blocking if not
+  _ <- cat $ meowMe foodInputChan catOutputChan -- forked and would have been blocking if not
 
   writeChan foodInputChan Smile
   response <- readChan catOutputChan
@@ -35,5 +33,5 @@ main = do
   response' <- readChan catOutputChan
   putStrLn response'
 
-  getLine
+  _ <- getLine
   return ()

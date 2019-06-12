@@ -15,9 +15,7 @@
 
 module Singleton.SingPaper where
 
-import           Data.Kind
-import           Data.Singletons
-import           Data.Singletons.TH
+
 
 {-
  Elements that support the singleton library

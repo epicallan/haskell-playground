@@ -1,6 +1,6 @@
 > {-# LANGUAGE TemplateHaskell #-}
 > module Prisms.Notes where
-> import Universum
+
 
 references
 - https://blog.jle.im/entry/lenses-products-prisms-sums.html

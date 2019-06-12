@@ -16,7 +16,7 @@
 {-# LANGUAGE UndecidableInstances  #-}
 {-# OPTIONS_GHC -Wall                       #-}
 {-# OPTIONS_GHC -Werror=incomplete-patterns #-}
-
+{-# OPTIONS_GHC -Wno-redundant-constraints #-}
 -- Exercise
 
 module Singleton.Door3 where

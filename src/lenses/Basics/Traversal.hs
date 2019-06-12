@@ -2,9 +2,8 @@
 
 module Lenses.Basics.Traversal where
 
-import Control.Applicative
 import Control.Lens
-import qualified Data.Map as M
+
 
 {-
     How do Traversals fit into the lens hierarchy?
@@ -84,7 +83,7 @@ allAmounts
 allAmounts f = traverse go
     where
         go (Withdrawal amt) = Withdrawal <$> f amt
-        go (Deposit amt)  = Deposit <$> f amt
+        go (Deposit amt)    = Deposit <$> f amt
 
 
 -- to fold a traversal into a list
@@ -117,7 +116,7 @@ data AccountType = Chequing | Savings
 
 
 data BankAccount = BankAccount
-    { accountType :: AccountType
+    { accountType  :: AccountType
     , transactions :: [Transaction]
     } deriving Show
 

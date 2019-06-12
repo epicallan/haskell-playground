@@ -38,14 +38,14 @@ infixl 6 :+
 -- infixl 7 :*
 
 type family   (n :: Nat) :+ (m :: Nat) :: Nat
-type instance Z   :+ m = m
-type instance S n :+ m = S (n :+ m)
+type instance 'Z   :+ m = m
+type instance 'S n :+ m = 'S (n :+ m)
 
 -- TODO: implement multiplication
 
 data Vector a n where
-  Nil  :: Vector a Z
-  (:-) :: a -> Vector a n -> Vector a (S n)
+  Nil  :: Vector a 'Z
+  (:-) :: a -> Vector a n -> Vector a ('S n)
 
 infixr 5 :-
 

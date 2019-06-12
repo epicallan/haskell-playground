@@ -8,7 +8,6 @@ module Design.SampleA.Main where
 import Universum
 
 import Control.Lens hiding (view)
-import Control.Monad.Reader
 
 newtype Config = Config {_companyName :: Text}
 

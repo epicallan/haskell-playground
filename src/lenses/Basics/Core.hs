@@ -1,12 +1,12 @@
 -- Refrence: https://artyom.me/lens-over-tea-1
 -- This is needed so that we can have constraints in type synonyms.
 {-# LANGUAGE RankNTypes #-}
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 
 module Lenses.Basics.Core where
 
 import Control.Applicative
 import Data.Bifunctor
-import Data.Functor.Compose
 import Data.Functor.Identity
 
 {-
@@ -34,6 +34,7 @@ setIth index new list
     | old:rest <- list = if index == 0
                             then new : rest
                             else old : setIth (index-1) new rest
+
 
 -- | the ixGs lense, accesses and sets the i-th element of a list
 ixGs :: Int -> LensGs [a] a
@@ -137,9 +138,9 @@ over l f = runIdentity . l (Identity . f)
 -- we use Const
 -- data Const  x  a   = Const  x
 getByConst :: Lens s t a b -> s -> a
-getByConst lens s = x
+getByConst lens_ s = x
   where
-    Const x = lens Const s
+    Const x = lens_ Const s
 
 -- view :: Lens s t a b -> s -> a
 -- view = getByConst
@@ -164,7 +165,7 @@ lens get set afb s = set s <$> afb (get s)
 _all :: Eq a => a -> Lens' [a] a
 _all ref = lens get set
     where
-        get s = ref
+        get _ = ref
         set s new = map (\old -> if old == ref then new else old) s
 
 
@@ -211,4 +212,3 @@ view l = getConst . l Const
 
 -- type Lens s t a b = forall f. Functor f => (a -> f b) -> s -> f t
 type Traversal s t a b = forall f. Applicative f => (a -> f b) -> s -> f t
-

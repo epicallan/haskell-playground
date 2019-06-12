@@ -13,3 +13,6 @@
 - [redux react app optimization](https://itnext.io/redux-ruins-you-react-app-performance-you-are-doing-something-wrong-82e28ec96cf5)
 
 - look into loopback4 https://v4.loopback.io/
+
+- [The Patterns Behind Scalable, Reliable, and Performant Large-Scale Systems](https://github.com/binhnguyennus/awesome-scalability)
+- [An extensible-effects implementation ](https://github.com/natefaubion/purescript-run)

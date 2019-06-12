@@ -1,10 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
 module EitherIO where
 
-import           Control.Applicative
-import           Data.Map            as Map
-import           Data.Text
-import           Data.Text.IO        as T
+import Control.Applicative
+import Data.Map as Map
+import Data.Text
+import Data.Text.IO as T
 
 newtype ExceptT e m a = ExceptT {
     runExceptT :: m (Either e a)
@@ -50,7 +50,7 @@ users = Map.fromList [("example.com", "qwerty123"), ("localhost", "password")]
 
 main :: IO ()
 main = do
-  runExceptT loginDialogue
+  _ <- runExceptT loginDialogue
   return ()
 
 loginDialogue :: ExceptT LoginError IO ()
@@ -95,5 +95,5 @@ getToken = do
 getDomain :: Text -> Either LoginError Text
 getDomain email =
   case splitOn "@" email of
-    [name, domain] -> Right domain
-    _              -> Left InvalidEmail
+    [_ , domain] -> Right domain
+    _            -> Left InvalidEmail

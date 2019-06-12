@@ -6,9 +6,7 @@ import Control.Monad.Trans.Resource
 main :: IO ()
 main = runResourceT $ do
     (releaseKey, resource) <- allocate
-        (do
-            putStrLn "Enter some number"
-            readLn)
+        (putStrLn "Enter some number" >> readLn)
         (\i -> putStrLn $ "Freeing scarce resource: " ++ show i)
     doSomethingDangerous resource
     liftIO $ putStrLn $ "Going to release resource immediately: " ++ show resource

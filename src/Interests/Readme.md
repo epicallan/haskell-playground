@@ -136,3 +136,5 @@ code : http://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.tar.gz
 - [Optics](https://github.com/hablapps/DontFearTheProfunctorOptics)
 
 - https://www.reddit.com/r/haskell/comments/bzne92/write_you_a_haskell/ discussion on resources for writing a functional language
+
+- https://fbrs.io/unliftio/ Introduction to how unliftio works

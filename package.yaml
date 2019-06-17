@@ -20,6 +20,8 @@ library:
   - containers
   - directory
   - filepath
+  - finite-typelits
+  - ghc-typelits-natnormalise
   - lens
   - mtl
   - megaparsec
@@ -32,6 +34,7 @@ library:
   - temporary
   - text
   - time
+  - vector
   - vinyl
 default-extensions:
   - LambdaCase

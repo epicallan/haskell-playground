@@ -67,3 +67,7 @@ jon = SName =:: "jon"
         :& (SAge =:: 23)
         :& (SSleeping =:: False)
         :& RNil
+
+
+-- accessor
+-- name ::

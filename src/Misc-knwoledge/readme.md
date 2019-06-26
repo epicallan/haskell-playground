@@ -16,3 +16,4 @@
 
 - [The Patterns Behind Scalable, Reliable, and Performant Large-Scale Systems](https://github.com/binhnguyennus/awesome-scalability)
 - [An extensible-effects implementation ](https://github.com/natefaubion/purescript-run)
+- [https://github.com/pirix-gh/ts-toolbelt](Higher type safety for TypeScript https://pirix-gh.github.io/ts-toolbelt/)

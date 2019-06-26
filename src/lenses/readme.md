@@ -14,3 +14,5 @@
 
 - [Let lens course](https://github.com/data61/lets-lens)
 - [https://blog.jle.im/entry/lenses-products-prisms-sums.html](Lenses embody Products, Prisms embody Sums)
+
+- [https://haskell.fpcomplete.com/tutorial/lens](through intro)

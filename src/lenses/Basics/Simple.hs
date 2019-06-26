@@ -31,6 +31,9 @@ view l = getConst . l Const
 viewName :: Person -> String
 viewName Person{..} = getConst $ (`Person` age) <$> Const name
 
+viewName_ :: Person -> String
+viewName_ = view _name
+
 -- set :: ((a -> f a) -> s -> f s) -> a -> s -> s
 set :: SimpleLens s a -> a -> s -> s
 set l b = runIdentity . l (\_ -> Identity b)

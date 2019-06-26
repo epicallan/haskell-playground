@@ -71,6 +71,7 @@ index = \case
    SZ :: Sing 'Z
    SS :: Sing n -> Sing ('S n)
 
+-- Sing ('S 'S 'Z) = FS (FZ) -- Fin ('S ('S 'S 'Z))
 -- Sing ('S 'S 'Z) = SS (SS SZ)
 
   class SingI k where
@@ -100,10 +101,14 @@ generate :: SingI n => (Fin n -> a) -> Vec n a
 generate = generate_ sing
 
 withVec :: [a] -> (forall n. Sing n -> Vec n a -> r) -> r
-withVec = \case
-  []     -> \f -> f SZ VNil
-  x : xs -> \f -> withVec xs $ \l ys ->
-     f (SS l) (x :+ ys)
+withVec xs f = case xs of
+  []     -> f SZ VNil
+  x' : xs' -> withVec xs' $ \l ys ->
+     f (SS l) (x' :+ ys)
+{-
+
+f SZ VNil $ \l ys -> f (SS l) (1 :+ ys)
+-}
 
 vecLength :: Vec n a -> Sing n
 vecLength = \case
@@ -173,7 +178,7 @@ given (via proof) that the vector has at least that many elements:
 
 takeVec :: LTE n m -> Vec m a -> Vec n a
 takeVec = \case
-    LEZ   -> \_ -> VNil
+    LEZ   -> const VNil
     LES l -> \case
       x :+ xs -> x :+ takeVec l xs
 

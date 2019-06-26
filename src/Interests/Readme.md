@@ -138,3 +138,9 @@ code : http://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.tar.gz
 - https://www.reddit.com/r/haskell/comments/bzne92/write_you_a_haskell/ discussion on resources for writing a functional language
 
 - https://fbrs.io/unliftio/ Introduction to how unliftio works
+
+- [http://purelytheoretical.com/sywtltt.html](Type theory resource)
+
+- [https://discourse.haskell.org/t/records-of-functions-and-implicit-parameters/747](Part of a blog series with designing applications with records of functions)
+
+- [https://leanpub.com/lenses](lens book in purescript)

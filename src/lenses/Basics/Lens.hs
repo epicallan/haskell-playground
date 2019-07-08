@@ -84,7 +84,8 @@ personWithAddress = PersonWithAddress
   , job = "doctor"
   }
 -- | address city lens
-
+ -- f (g x) = f . g
+-- addressCityl :: (String -> f String) -> Address -> f Address
 addressCityl :: Lens Address String
 addressCityl = lens cityGetter citySetter
   where
@@ -94,6 +95,7 @@ addressCityl = lens cityGetter citySetter
     citySetter :: Address -> String -> Address
     citySetter add newCity = add { addressCity = newCity }
 
+-- personAddressL :: (Address -> f Address) -> PersonWithAddress -> f PersonWithAddress
 personAddressl :: Lens PersonWithAddress Address
 personAddressl = lens addrGetter addrSetter
   where
@@ -104,13 +106,14 @@ personAddressl = lens addrGetter addrSetter
     addrSetter pa newAddr = pa { address = newAddr }
 
 
-personAddressL
+-- | lens composition
+personCityAddressL
   :: Functor f
   => (String -> f String) -> PersonWithAddress -> f PersonWithAddress
-personAddressL =  personAddressl . addressCityl
+personCityAddressL = personAddressl . addressCityl
 
 viewAddress :: String
-viewAddress = view personAddressL personWithAddress
+viewAddress = view personCityAddressL personWithAddress
 
 -- | Polymorphic lens type
 

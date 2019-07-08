@@ -88,6 +88,8 @@
 - [ ] [Optics](https://github.com/cohomolo-gy/optics-resources)
 
 - [functional_pearls](https://www.reddit.com/r/haskell/comments/9cyzzb/must_readfavourite_functional_pearls/)
+- https://wiki.haskell.org/Research_papers/Functional_pearls
+
 - [Resources & papers](https://github.com/cohomolo-gy/haskell-resources/blob/master/README.md)
 - [Singletons paper](https://cs.brynmawr.edu/~rae/papers/2012/singletons/paper.pdf)
 
@@ -144,3 +146,9 @@ code : http://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.tar.gz
 - [https://discourse.haskell.org/t/records-of-functions-and-implicit-parameters/747](Part of a blog series with designing applications with records of functions)
 
 - [https://leanpub.com/lenses](lens book in purescript)
+
+- [https://haskell.fpcomplete.com/learn](fp complete learning path)
+- graphql https://github.com/morpheusgraphql/morpheus-graphql
+- GHC reading list https://gitlab.haskell.org/ghc/ghc/wikis/reading-list
+
+- FP reading list https://gist.github.com/epicallan/8b81cf00182ef4373af7c669f5f60cb4

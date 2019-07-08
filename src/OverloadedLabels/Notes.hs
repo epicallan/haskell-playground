@@ -4,7 +4,7 @@ module OverloadedLabels.Notes where
 import GHC.OverloadedLabels (IsLabel (..))
 import GHC.TypeLits
 
--- | Manual records access, this can be simplified with overloaded record fields
+-- | GHC Docs example
 data Label (l :: Symbol) = Get
 
 class KnownSymbol l => GetValue r l a | r l -> a where
@@ -23,6 +23,7 @@ instance GetValue Point "y" Int where
 
 instance GetValue Point s a => IsLabel (s :: Symbol) (Point -> a) where
   fromLabel x = getValue x (Get :: Label s)
+
 
 -- example
 

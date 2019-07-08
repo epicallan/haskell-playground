@@ -1,1 +1,0 @@
-# Building a modern functional compiler from first principles. (http://dev.stephendiehl.com/fun/) 

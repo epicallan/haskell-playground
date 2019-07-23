@@ -21,6 +21,7 @@ library:
   - directory
   - filepath
   - finite-typelits
+  - ghc-prim
   - ghc-typelits-natnormalise
   - lens
   - mtl

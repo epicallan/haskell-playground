@@ -50,3 +50,5 @@ main = do
   print $ myAge somePerson
   putStrLn $ #name somePerson
   putStrLn . #street . #address $ somePerson
+
+-- TODO: support api https://github.com/PkmX/rawr/blob/master/src/Data/Rawr.hs

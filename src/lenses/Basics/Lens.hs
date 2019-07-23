@@ -9,7 +9,7 @@ import Data.Functor.Identity
 
 type Lens s a = forall f. Functor f => (a -> f a) -> s -> f s
 
-type LensGetter s a = (a -> Const a s) -> s -> Const a s
+type LensGetter s a = (a -> Const a a) -> s -> Const a s
 
 type LensModify s a = (a -> Identity a) -> s -> Identity s
 

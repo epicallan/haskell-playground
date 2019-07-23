@@ -22,8 +22,11 @@ instance GetValue Point "y" Int where
   getValue (Point _ y) _ = y
 
 instance GetValue Point s a => IsLabel (s :: Symbol) (Point -> a) where
-  fromLabel x = getValue x (Get :: Label s)
+  fromLabel point = getValue point (Get :: Label s)
 
+{-
+ A call to a label gets translated into  fromlabel :: IsLabel s a => a
+-}
 
 -- example
 
@@ -31,3 +34,4 @@ getX :: Int
 getX = #x (Point 1 2)
 
 -- #x (Point 1 2)
+

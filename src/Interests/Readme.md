@@ -154,3 +154,4 @@ code : http://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.tar.gz
 - FP reading list https://gist.github.com/epicallan/8b81cf00182ef4373af7c669f5f60cb4
 - lamda calculus intro https://crypto.stanford.edu/~blynn/lambda/
 - Fancy types for CSV library https://oleg.fi/gists/posts/2019-07-15-fancy-types-for-cassava.html
+- https://blog.latukha.com/haskell-notes.html

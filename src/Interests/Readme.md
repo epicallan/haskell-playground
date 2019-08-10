@@ -155,3 +155,6 @@ code : http://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.tar.gz
 - lamda calculus intro https://crypto.stanford.edu/~blynn/lambda/
 - Fancy types for CSV library https://oleg.fi/gists/posts/2019-07-15-fancy-types-for-cassava.html
 - https://blog.latukha.com/haskell-notes.html
+- Type equality predicates: from OverlappingInstances to overcoming them http://okmij.org/ftp/Haskell/typeEQ.html#special-case
+- superMonads https://jbracker.de/publications/2016-BrackerNilsson-Supermonads.pdf
+- http://www.haskellforall.com/2014/04/model-view-controller-haskell-style.html 

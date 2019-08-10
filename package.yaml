@@ -17,6 +17,7 @@ library:
   - classy-prelude-conduit
   - bytestring
   - conduit
+  - conduit-extra
   - containers
   - directory
   - filepath

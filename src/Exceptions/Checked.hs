@@ -1,8 +1,8 @@
--- | source
 {-# LANGUAGE DefaultSignatures  #-}
 {-# LANGUAGE DeriveAnyClass     #-}
 {-# LANGUAGE DerivingStrategies #-}
 {-# LANGUAGE NoImplicitPrelude  #-}
+{-# LANGUAGE TypeFamilies       #-}
 module Exceptions.Checked where
 
 -- | custom prelude
@@ -44,7 +44,7 @@ data DBException = DBException
   deriving (Show)
   deriving anyclass (Exception)
 
--- | example of monadic effectfull  code that can throw multiple errors
+-- | example of monadic effectful  code that can throw multiple errors
 simpleHttp
   :: forall m . (ThrowsMany m '[ HTTPException, DBException ], HttpNetwork m User)
   => Id -> m User

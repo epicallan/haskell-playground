@@ -157,4 +157,11 @@ code : http://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.tar.gz
 - https://blog.latukha.com/haskell-notes.html
 - Type equality predicates: from OverlappingInstances to overcoming them http://okmij.org/ftp/Haskell/typeEQ.html#special-case
 - superMonads https://jbracker.de/publications/2016-BrackerNilsson-Supermonads.pdf
-- http://www.haskellforall.com/2014/04/model-view-controller-haskell-style.html 
+- http://www.haskellforall.com/2014/04/model-view-controller-haskell-style.html
+- Functional reactive programming zoo https://github.com/gelisam/frp-zoo
+- http://oleg.fi/gists/posts/2017-03-20-affine-traversal.html
+
+- https://www.reddit.com/r/haskell/comments/a4wk1i/seminal_works_after_purely_functional_data/
+- https://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki
+
+- https://www.reddit.com/r/haskell/comments/8ga6ow/journey_to_haskell_and_the_theory/

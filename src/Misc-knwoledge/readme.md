@@ -19,3 +19,4 @@
 - [https://github.com/pirix-gh/ts-toolbelt](Higher type safety for TypeScript https://pirix-gh.github.io/ts-toolbelt/)
 
 - [Project architecture](https://softwareontheroad.com/ideal-nodejs-project-structure/)
+- https://github.com/Kikobeats/awesome-api

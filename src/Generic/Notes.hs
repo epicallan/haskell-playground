@@ -1,4 +1,5 @@
 -- | Notes from thinking with types
+{-# LANGUAGE DefaultSignatures #-}
 module Generic.Notes where
 
 import Data.Kind
@@ -36,9 +37,9 @@ class Generic_ a where
 
 {-
  A Bool class instance would result in below types
- Rep Bool = ( ... UI :+:  ... UI)
- :+: is analogous to | in data constructors and because True and False have no data UI are used
- to represent Unit type
+ Rep Bool = ( ... U1 :+:  ... U1)
+ :+: is analogous to | in data constructors and because True and False have no data U1 is used
+ to represent the Unit type
 
  > :kind! Rep Bool
    Rep Bool :: Type -> Type =
@@ -84,7 +85,7 @@ data Meta =
 -}
 instance Generic Empty where
   type Rep Empty =
-    D1 ('MetaData "Empty" "Generic.Notes" "Generic.Notes" 'False) V1
+    D1 ('MetaData "Empty" "Generic.Notes" "haskell-playground" 'False) V1
 
   from = error "do me"
   to = error "do me"
@@ -103,9 +104,9 @@ data Boolean = True_ | False_
 instance Generic Boolean where
   type Rep Boolean =
     D1 ('MetaData "Boolean" "Data.Bool" "package-name" 'False)
-      ( C1 ('MetaCons "False" 'PrefixI 'False) U1 :+:
-        C1 ('MetaCons "True" 'PrefixI 'True ) U1
-      )
+       ( C1 ('MetaCons "False" 'PrefixI 'False) U1 :+:
+         C1 ('MetaCons "True" 'PrefixI 'True ) U1
+       )
   -- ^ U1 stands for unit type
 
   from = error "do me"
@@ -126,20 +127,22 @@ data Tree a = Leaf a | Node (Tree a) (Tree a)
 
 instance Generic (Tree a) where
   type Rep (Tree a) =
-    D1 ('MetaData "Tree" "Main" "package-name" 'False)
+    D1 ('MetaData "Tree" "Generic.Notes" "haskell-playground" 'False)
       (C1 ('MetaCons "Leaf" 'PrefixI 'False)
-         (S1 ('MetaSel 'Nothing
-                         'NoSourceUnpackedness
-                         'NoSourceStrictness
-                         'DecidedLazy)
-                (Rec0 a))
+          (S1 ('MetaSel 'Nothing
+                       'NoSourceUnpackedness
+                       'NoSourceStrictness
+                       'DecidedLazy
+             ) (Rec0 a)
+          )
        :+:
        C1 ('MetaCons "Node" 'PrefixI 'False)
          (S1 ('MetaSel 'Nothing
-                         'NoSourceUnpackedness
-                         'NoSourceStrictness
-                         'DecidedLazy)
-               (Rec0 (Tree a))
+                       'NoSourceUnpackedness
+                       'NoSourceStrictness
+                       'DecidedLazy
+             ) (Rec0 (Tree a)
+          )
           :*:
           S1 ('MetaSel 'Nothing
                          'NoSourceUnpackedness
@@ -151,7 +154,7 @@ instance Generic (Tree a) where
   to = error "do me"
 
 {--
- reduced implementation
+reduced implementation
 instance Generic (Tree a) where
   type Rep (Tree a) =
     Rec0 a
@@ -174,12 +177,9 @@ newtype M1  i t f p = M1 { unM1 :: f p }  -- a wrapper
 
 -- | Generically deriving Eq class
 
-
-
 {-
- Approach to generically derive sturctural polymorphism is
-threefold
- 1 . Define a typeclass to act as a carrier
+ Approach to generically derive structural polymorphism is threefold
+ 1 . Define a type class to act as a carrier
  2 . Provide inductive instances of the class for the generic constructors
  3 . Finally write a helper function to map between the Rep and the desired type
 -}
@@ -241,3 +241,39 @@ instance GOrd a => GOrd (M1 _x _y a) where
 
 genericOrd :: (Generic a, GOrd (Rep a)) => a -> a -> Bool
 genericOrd a b = from a <<= from b
+
+{-
+Use GHC.Generics to implement the function exNihilo :: Maybe a.
+This function should give a value of Just a if a has exactly one data constructor which takes zero arguments.
+Otherwise, exNihilo should return Nothing.
+-}
+
+
+class Nihilo a where
+  exNihilo :: a -> Maybe a
+
+  default exNihilo :: (Generic a, GHasOneCons (Rep a)) => a -> Maybe a
+  exNihilo x = if gHasOneCons (from x) then Just x else Nothing
+
+class GHasOneCons (a :: k -> Type) where
+  gHasOneCons :: a x -> Bool
+
+instance GHasOneCons U1 where gHasOneCons _ = True
+instance GHasOneCons V1 where gHasOneCons _ = False
+instance GHasOneCons (K1 _i a) where gHasOneCons _  = False
+instance GHasOneCons (a :+: b) where gHasOneCons _ = False
+instance GHasOneCons (a :*: b) where gHasOneCons _ = False
+instance GHasOneCons a => GHasOneCons (M1 _x _y a) where
+  gHasOneCons (M1 a) = gHasOneCons a
+
+data ExampleNihilo = ExampleNihilo
+  deriving (Show, Generic)
+
+instance Nihilo ExampleNihilo
+
+instance Nihilo Bool
+
+exampleNihilo :: IO ()
+exampleNihilo = do
+  print $ exNihilo ExampleNihilo
+  print $ exNihilo True

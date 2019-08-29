@@ -23,6 +23,7 @@ library:
   - free
   - filepath
   - finite-typelits
+  - generics-sop
   - ghc-prim
   - ghc-typelits-natnormalise
   - lens

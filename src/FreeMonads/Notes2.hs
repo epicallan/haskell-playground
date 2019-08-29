@@ -14,6 +14,12 @@ data TeletypeF x
 
 type Teletype = Free TeletypeF
 
+-- | TODO: exercise
+
+-- trace the executions below
+-- Free (GetLine p) <$> f
+-- Free (GetLine p) >>= f 
+
 putStrLn' :: String -> Teletype ()
 putStrLn' str = liftF $ PutStrLn str ()
 

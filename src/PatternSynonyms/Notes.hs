@@ -2,6 +2,8 @@
 {-# LANGUAGE ViewPatterns    #-}
 module PatternSynonyms.Notes where
 
+-- | Good resource  https://haskell-explained.gitlab.io/blog/posts/2019/08/27/pattern-synonyms/index.html 
+
 -- | from GHC docs
 
 data Type = App String [Type]

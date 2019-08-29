@@ -99,31 +99,32 @@ type POP (f :: k -> Type) (xss :: [[k]]) = NP (NP f) xss
 
 instance Generic Expr where
   from :: Expr -> SOP I (Code Expr)
-  from (Num n)   = Z (I n  :* Nil)
-  from (Add e f) = S (Z (I e :* I f :* Nil))
+  from (Num n)           = Z (I n :* Nil)
+  from (Add expr1 expr2) = S (Z (I expr1 :* I expr2 :* Nil))
 
   to :: SOP I (Code Expr) -> Expr
-  to (Z (I n :* Nil ))           = Num n
-  to (S (Z (I e :* I f :* Nil))) = Add e f
-  to (S (S _ ))                  = error "GHC error"
+  to (Z (I n :* Nil))                    = Num n
+  to (S (Z (I expr1 :* I expr2 :* Nil))) = Add expr1 expr2
+  to (S (S _))                           = error "GHC error"
 
 
 -- | Lists example
 data List a = NilL | ConsL a (List a)
 
-type instance Code (List a) = '[ '[ ], '[ a, List a ] ]
+type instance Code (List a) = '[ '[ ], '[a, List a] ]
 
-type instance Code [ a ] = '[ '[], '[ a, [ a ] ]]
+type instance Code [ a ] = '[ '[ ], '[ a, [ a ]  ] ]
 
-instance Generic [a] where
+instance Generic ([ a ]) where
   from :: [a] -> SOP I (Code [ a ])
   from []       = Z Nil
   from (x : xs) = S (Z (I x :* I xs :* Nil))
 
-  to :: SOP I (Code [ a ]) -> [a]
+  to :: SOP I (Code [ a ]) -> [ a ]
   to (Z Nil)                      = []
   to (S (Z (I x :* I xs :* Nil))) = x : xs
   to (S (S _))                    = error "GHC error"
+
 
 -- | There is template haskell for automatic derivation
 

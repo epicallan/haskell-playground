@@ -165,3 +165,10 @@ code : http://cs.brynmawr.edu/~rae/papers/2018/stitch/stitch.tar.gz
 - https://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki
 
 - https://www.reddit.com/r/haskell/comments/8ga6ow/journey_to_haskell_and_the_theory/
+
+- FP Software design principles  http://conal.net/papers/type-class-morphisms/
+
+- Deriving Via with MTL https://gist.github.com/lunaris/86440b552c7cc282a5cc37fb89845f70
+
+- Functor oriented programming https://www.reddit.com/r/haskell/comments/d20aom/functororiented_programming/
+- Programming language theory https://www.reddit.com/r/haskell/comments/d1vth4/book_recommendation_programming_language_concepts/

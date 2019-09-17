@@ -7,6 +7,9 @@
 module ImplicitParams.AnonRecords1 where
 
 import Data.Kind (Constraint)
+-- import Data.Proxy
+-- import Data.Default.Class (Default, def)
+
 
 data Rec (fields :: Constraint) where
   Rec :: fields => Rec fields
@@ -24,6 +27,20 @@ record =
   let ?name = "allan"
       ?age = 28
   in Rec
+
+{-
+
+ex :: Implicit String => IO ()
+ex = putStrnLn param
+
+-- ex1 :: String -> IO () -- translation
+
+ex $~ "hey"
+
+-}
+
+
+
 
 getAge :: Int -- | ()
 getAge = record ?: ?age

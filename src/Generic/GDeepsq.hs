@@ -23,4 +23,3 @@ class GNFData a where
 
 data A = C Bool | D A Int
   deriving (Show, GHC.Generic, Generic, GNFData)
-

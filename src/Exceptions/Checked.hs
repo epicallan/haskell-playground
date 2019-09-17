@@ -8,6 +8,8 @@ module Exceptions.Checked where
 -- | custom prelude
 import Universum
 
+-- see https://hackage.haskell.org/package/safe-exceptions-checked-0.1.0/docs/Control-Exception-Safe-Checked.html
+
 {-
  This is an extended take and exploration on implementing Checked exemptions in haskell
  inspired by  https://www.well-typed.com/blog/2015/07/checked-exceptions/
